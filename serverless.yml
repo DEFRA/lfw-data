@@ -1,0 +1,44 @@
+service: lfw
+provider:
+  name: aws
+  stackName: ${env:LFW_TARGET_ENV_NAME}${self:service}
+  runtime: nodejs8.10
+  role: ${env:LFW_SLS_LAMBA_ROLE}
+  stage: ${env:LFW_TARGET_ENV_NAME}
+  region: ${env:LFW_TARGET_REGION}
+  profile: ${env:LFW_AWS_PROFILE}
+  deploymentBucket:
+    name: ${env:LFW_SLS_BUCKET}
+  environment:
+    stage: ${env:LFW_TARGET_ENV_NAME}
+    LFW_DB_CONNECTION: ${env:LFW_DB_CONNECTION}
+  vpc:
+    securityGroupIds:
+      - ${env:LFW_VPN_SECURITY_GROUP}
+    subnetIds:
+      - ${env:LFW_SUBNET_1}
+      - ${env:LFW_SUBNET_2}
+package:
+ exclude:
+   - test
+functions:
+  ffoiProcess:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-ffoiProcess
+    handler: lib/functions/ffoiProcess.handler
+    timeout: 60
+  rloiProcess:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiProcess
+    handler: lib/functions/rloiProcess.handler
+    timeout: 120
+  stationProcess:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-stationProcess
+    handler: lib/functions/rloiStationProcess.handler
+    timeout: 120
+  rloiRefresh:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiRefresh
+    handler: lib/functions/rloiRefresh.handler
+    timeout: 60
+  fwisProcess:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-fwisProcess
+    handler: lib/functions/fwisProcess.handler
+    timeout: 120

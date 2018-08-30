@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "devlfw"
+        },
+        "object": {
+          "key": "fwfidata/ENT_7024/SWFSSWTS20180514075150958.XML"
+        }
+      }
+    }
+  ]
+}

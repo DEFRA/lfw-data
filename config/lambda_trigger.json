@@ -1,0 +1,21 @@
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "LambdaFunctionArn": "{{LambdaArn}}",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "prefix",
+              "Value": "fwfidata/ENT_7024/"
+            }, {
+              "Name": "suffix",
+              "Value": ".XML"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "devlfw"
+        },
+        "object": {
+          "key": "fwfidata/ENT_7010/rloiStationData.csv"
+        }
+      }
+    }
+  ]
+}

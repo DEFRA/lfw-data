@@ -1,0 +1,136 @@
+<?xml version="1.0" standalone="yes"?>
+<EATimeSeriesDataExchangeFormat xmlns="http://www.environment-agency.gov.uk/XMLSchemas/EATimeSeriesDataExchangeFormat" xmlns:md="http://www.environment-agency.gov.uk/XMLSchemas/EAMetadataFormat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.environment-agency.gov.uk/XMLSchemas/EATimeSeriesDataExchangeFormat EATimeSeriesDataExchangeFormat.xsd">
+	<md:Publisher>Environment Agency</md:Publisher>
+	<md:Source>EA South East Regional Telemetry System</md:Source>
+	<md:Description>Automated telemetry data export process</md:Description>
+	<md:Creator>SCX 6</md:Creator>
+	<md:Date>2018-06-29</md:Date>
+	<md:Time>11:03:48</md:Time>
+	<md:Identifier>SEKMHSCXAS1</md:Identifier>
+	<Station stationReference="test1" region="TestRegion" stationName="Walton PS" ngr="SU9999099990">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="m" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">1.986</Value>
+			<Value date="2018-06-29" time="10:30:00">1.986</Value>
+			<Value date="2018-06-29" time="10:45:00">1.986</Value>
+			<Value date="2018-06-29" time="11:00:00">1.986</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test2" region="TestRegion" stationName="River TestRegion at Teddington Lock" ngr="TQ17007140">
+		<SetofValues parameter="Water Level" qualifier="Downstream Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">3.181</Value>
+			<Value date="2018-06-29" time="10:30:00">3.153</Value>
+			<Value date="2018-06-29" time="10:45:00">3.142</Value>
+			<Value date="2018-06-29" time="11:00:00">3.182</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.041</Value>
+			<Value date="2018-06-29" time="10:30:00">0.049</Value>
+			<Value date="2018-06-29" time="10:45:00">0.045</Value>
+			<Value date="2018-06-29" time="11:00:00">0.047</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test3" region="TestRegion" stationName="TestRegion AT KINGSTON (TEDDINGTON)" ngr="TQ17706980">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mAOD" startDate="2018-06-29" startTime="10:45:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:45:00">4.464</Value>
+			<Value date="2018-06-29" time="11:00:00">4.465</Value>
+		</SetofValues>
+		<SetofValues parameter="Flow" dataType="Instantaneous" period="15 min" units="m3/s" startDate="2018-06-29" startTime="10:45:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:45:00">7.284</Value>
+			<Value date="2018-06-29" time="11:00:00">12.394</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test4" region="TestRegion" stationName="TestRegion at Kingston (Backup)" ngr="TQ06006500">
+		<SetofValues parameter="Flow" dataType="Instantaneous" period="15 min" units="m3/s" startDate="2018-06-29" startTime="10:45:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:45:00">5.890</Value>
+			<Value date="2018-06-29" time="11:00:00">11.850</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mAOD" startDate="2018-06-29" startTime="10:45:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:45:00">4.461</Value>
+			<Value date="2018-06-29" time="11:00:00">4.460</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test5" region="TestRegion" stationName="Molesey Lock" ngr="TQ15006870">
+		<SetofValues parameter="Water Level" qualifier="Downstream Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">2.610</Value>
+			<Value date="2018-06-29" time="10:30:00">2.601</Value>
+			<Value date="2018-06-29" time="10:45:00">2.604</Value>
+			<Value date="2018-06-29" time="11:00:00">2.612</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.117</Value>
+			<Value date="2018-06-29" time="10:30:00">0.128</Value>
+			<Value date="2018-06-29" time="10:45:00">0.112</Value>
+			<Value date="2018-06-29" time="11:00:00">0.113</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test6" region="TestRegion" stationName="River TestRegion at Sunbury Lock" ngr="TQ10506800">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.131</Value>
+			<Value date="2018-06-29" time="10:30:00">0.039</Value>
+			<Value date="2018-06-29" time="10:45:00">0.089</Value>
+			<Value date="2018-06-29" time="11:00:00">0.114</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Downstream Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">2.450</Value>
+			<Value date="2018-06-29" time="10:30:00">2.461</Value>
+			<Value date="2018-06-29" time="10:45:00">2.468</Value>
+			<Value date="2018-06-29" time="11:00:00">2.458</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test7" region="TestRegion" stationName="RIVER TestRegion AT WALTON" ngr="TQ09896700">
+		<SetofValues parameter="Flow" dataType="Instantaneous" period="15 min" units="m3/s" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">17.368</Value>
+			<Value date="2018-06-29" time="10:30:00">16.692</Value>
+			<Value date="2018-06-29" time="10:45:00">16.908</Value>
+			<Value date="2018-06-29" time="11:00:00">17.135</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">3.217</Value>
+			<Value date="2018-06-29" time="10:30:00">3.222</Value>
+			<Value date="2018-06-29" time="10:45:00">3.221</Value>
+			<Value date="2018-06-29" time="11:00:00">3.217</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test8" region="TestRegion" stationName="RIVER WEY AT WEYBRIDGE" ngr="TQ06856483">
+		<SetofValues parameter="Flow" dataType="Instantaneous" period="15 min" units="m3/s" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">3.842</Value>
+			<Value date="2018-06-29" time="10:30:00">3.356</Value>
+			<Value date="2018-06-29" time="10:45:00">3.585</Value>
+			<Value date="2018-06-29" time="11:00:00">3.260</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">1.000</Value>
+			<Value date="2018-06-29" time="10:30:00">1.002</Value>
+			<Value date="2018-06-29" time="10:45:00">1.002</Value>
+			<Value date="2018-06-29" time="11:00:00">0.997</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test9" region="TestRegion" stationName="River TestRegion at Shepperton Lock" ngr="TQ07336590">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.138</Value>
+			<Value date="2018-06-29" time="10:30:00">0.159</Value>
+			<Value date="2018-06-29" time="10:45:00">0.123</Value>
+			<Value date="2018-06-29" time="11:00:00">0.143</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Downstream Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">2.702</Value>
+			<Value date="2018-06-29" time="10:30:00">2.695</Value>
+			<Value date="2018-06-29" time="10:45:00">2.705</Value>
+			<Value date="2018-06-29" time="11:00:00">2.708</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="test10" region="TestRegion" stationName="River TestRegion at Chertsey Lock" ngr="TQ05406680">
+		<SetofValues parameter="Water Level" qualifier="Downstream Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">2.688</Value>
+			<Value date="2018-06-29" time="10:30:00">2.700</Value>
+			<Value date="2018-06-29" time="10:45:00">2.692</Value>
+			<Value date="2018-06-29" time="11:00:00">2.687</Value>
+		</SetofValues>
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="mASD" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.293</Value>
+			<Value date="2018-06-29" time="10:30:00">0.294</Value>
+			<Value date="2018-06-29" time="10:45:00">0.295</Value>
+			<Value date="2018-06-29" time="11:00:00">0.293</Value>
+		</SetofValues>
+	</Station>
+</EATimeSeriesDataExchangeFormat>
