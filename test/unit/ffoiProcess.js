@@ -4,7 +4,7 @@
 // const lab = exports.lab = Lab.script()
 // const fs = require('fs')
 // const handler = require('../../lib/functions/ffoiProcess').handler
-// let s3 = require('../../lib/s3')
+// let s3 = require('../../lib/helpers/s3')
 // const event = require('../events/event.json')
 // const xml = fs.readFileSync('./test/data/ffoiTest.XML')
 // let file = {

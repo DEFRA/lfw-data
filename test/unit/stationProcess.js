@@ -4,7 +4,7 @@
 // const lab = exports.lab = Lab.script()
 // const fs = require('fs')
 // const handler = require('../../lib/functions/stationProcess').handler
-// let s3 = require('../../lib/s3')
+// let s3 = require('../../lib/helpers/s3')
 // const event = require('../events/rloiStationEvent.json')
 // const file = {
 //   Body: fs.readFileSync('./test/data/rloiStationData.csv')

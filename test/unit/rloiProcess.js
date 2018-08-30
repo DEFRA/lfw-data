@@ -4,7 +4,7 @@
 // const lab = exports.lab = Lab.script()
 // const fs = require('fs')
 // const handler = require('../../lib/functions/rloiProcess').handler
-// let s3 = require('../../lib/s3')
+// let s3 = require('../../lib/helpers/s3')
 // const event = require('../events/rloiEvent.json')
 // const xml = fs.readFileSync('./test/data/rloiTest.XML')
 // let file = {

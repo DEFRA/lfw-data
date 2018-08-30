@@ -4,7 +4,7 @@ const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const fs = require('fs')
 const Code = require('code')
-let s3 = require('../../lib/s3')
+let s3 = require('../../lib/helpers/s3')
 const xml = fs.readFileSync('./test/data/rloiTest.XML')
 
 lab.experiment('Test Lambda functionality post deployment', () => {
