@@ -6,7 +6,6 @@ provider:
   role: ${env:LFW_SLS_LAMBA_ROLE}
   stage: ${env:LFW_TARGET_ENV_NAME}
   region: ${env:LFW_TARGET_REGION}
-  profile: ${env:LFW_AWS_PROFILE}
   deploymentBucket:
     name: ${env:LFW_SLS_BUCKET}
   environment:
