@@ -15,7 +15,7 @@
              "-f",
              "process",
              "--path",
-             "./test/ffoiEvent.json"
+             "./test/events/ffoiEvent.json"
          ]
      },
      {
@@ -29,7 +29,7 @@
            "-f",
            "rloiProcess",
            "--path",
-           "./test/rloiEvent.json"
+           "./test/events/rloiEvent.json"
        ]
    },
    {
@@ -43,7 +43,7 @@
            "-f",
            "stationProcess",
            "--path",
-           "./test/stationEvent.json"
+           "./test/events/stationEvent.json"
        ]
    }
   ]
