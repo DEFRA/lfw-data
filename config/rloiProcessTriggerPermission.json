@@ -1,7 +1,0 @@
-{
-  "FunctionName": "{stage}lfw-rloiProcess",
-  "StatementId": "events-invoke-{stage}lfw-rloiProcess",
-  "Action": "lambda:InvokeFunction",
-  "Principal": "events.amazonaws.com",
-  "SourceArn": "{bucketArn}"
-}
