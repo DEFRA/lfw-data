@@ -1,6 +1,7 @@
 {
   "LambdaFunctionConfigurations": [
     {
+      "Id": "{{triggerId}}",
       "LambdaFunctionArn": "{{LambdaArn}}",
       "Events": ["s3:ObjectCreated:*"],
       "Filter": {
