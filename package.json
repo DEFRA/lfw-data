@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/DEFRA/lfw-data#readme",
   "devDependencies": {
-    "code": "5.2.0",
+    "code": "^5.2.0",
     "lab": "15.4.4",
     "standard": "11.0.1"
   },

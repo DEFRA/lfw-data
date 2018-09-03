@@ -10,7 +10,7 @@
   <md:Date>2017-11-27</md:Date>
   <md:Time>21:01:44</md:Time>
   <Station stationReference="test1" stationName="Louth Weir">
-    <SetofValues parameter="Water Level" dataType="Instantaneous"
+    <SetofValues parameter="Not Water Level" dataType="Instantaneous"
       period="15 min" characteristic="Forecast" units="m"
       startDate="2017-11-27" startTime="20:00:00" endDate="2017-11-28" endTime="21:00:00">
       <Value date="2017-11-27" time="20:00:00" flag1="1">0.102</Value>
