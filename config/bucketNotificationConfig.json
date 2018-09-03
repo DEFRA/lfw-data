@@ -62,7 +62,7 @@
               "Value": "fwfidata/ENT_7005/fwis"
             }, {
               "Name": "suffix",
-              "Value": ".XML"
+              "Value": ".xml"
             }
           ]
         }
