@@ -3,6 +3,7 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
+const Joi = require('joi')
 const fs = require('fs')
 const handler = require('../../lib/functions/ffoiProcess').handler
 let s3 = require('../../lib/helpers/s3')
@@ -12,6 +13,8 @@ const xmlNoWaterLevel = fs.readFileSync('./test/data/ffoiTestNoWaterLevel.XML')
 let file = {
   Body: xml
 }
+const ffoiSchema = require('../schemas/ffoi')
+const s3PutSchema = require('../schemas/s3Put')
 
 lab.experiment('FFOI processing', () => {
   lab.beforeEach(async () => {
@@ -28,7 +31,17 @@ lab.experiment('FFOI processing', () => {
     }
   })
 
-  lab.test('FFOI process', async () => {
+  lab.test('FFOI happy process', async () => {
+    s3.putObject = (params) => {
+      let result = Joi.validate(params, s3PutSchema)
+      Code.expect(result.error).to.be.null()
+      const file = JSON.parse(params.Body)
+      result = Joi.validate(file, ffoiSchema)
+      Code.expect(result.error).to.be.null()
+      return new Promise((resolve, reject) => {
+        resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
+      })
+    }
     try {
       await handler(event)
     } catch (err) {
