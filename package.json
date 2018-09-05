@@ -8,7 +8,8 @@
     "lint": "standard",
     "unit-test": "lab test/unit -v -c --coverage-exclude lib/helpers -r console -o stdout -r html -o test/output-unit.html -m 5000",
     "post-deployment-test": "npm run integration-test",
-    "pre-deployment-test": "npm run lint && npm run unit-test"
+    "pre-deployment-test": "npm run lint && npm run unit-test",
+    "test": "npm run lint && npm run unit-test"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/DEFRA/lfw-data#readme",
   "devDependencies": {
     "code": "^5.2.0",
+    "codeclimate-test-reporter": "^0.5.0",
     "lab": "15.4.4",
     "standard": "11.0.1"
   },
