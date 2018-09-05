@@ -69,7 +69,7 @@ lab.experiment('FFOI processing', () => {
       return new Promise((resolve, reject) => {
         reject(new Error())
       })
-    }    
+    }
     try {
       await handler(event)
     } catch (err) {
@@ -84,7 +84,7 @@ lab.experiment('FFOI processing', () => {
       return new Promise((resolve, reject) => {
         reject(new Error())
       })
-    }    
+    }
     try {
       await handler(event)
     } catch (err) {
