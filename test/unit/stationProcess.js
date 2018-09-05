@@ -6,6 +6,7 @@ const Code = require('code')
 const fs = require('fs')
 const handler = require('../../lib/functions/stationProcess').handler
 let s3 = require('../../lib/helpers/s3')
+let db = require('../../lib/helpers/db')
 const event = require('../events/stationEvent.json')
 const file = {
   Body: fs.readFileSync('./test/data/rloiStationData.csv')
@@ -22,6 +23,12 @@ lab.experiment('RLOI Station processing', () => {
     s3.putObject = (params) => {
       return new Promise((resolve) => {
         resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
+      })
+    }
+
+    db.query = (query, vars) => {
+      return new Promise((resolve, reject) => {
+        resolve({})
       })
     }
   })

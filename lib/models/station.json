@@ -1,0 +1,194 @@
+[
+  {
+    "name": "telemetry_id",
+    "property": "Telemetry_ID"
+  },
+  {
+    "name": "wiski_id",
+    "property": "WISKI_ID"
+  },
+  {
+    "name": "rloi_id",
+    "property": "RLOI_ID"
+  },
+  {
+    "name": "station_type",
+    "property": "Station_Type"
+  },
+  {
+    "name": "post_process",
+    "property": "Post_Process"
+  },
+  {
+    "name": "subtract",
+    "property": "Subtract"
+  },
+  {
+    "name": "region",
+    "property": "Region"
+  },
+  {
+    "name": "area",
+    "property": "Area"
+  },
+  {
+    "name": "catchment",
+    "property": "Catchment"
+  },
+  {
+    "name": "display_region",
+    "property": "Display_Region"
+  },
+  {
+    "name": "display_area",
+    "property": "Display_Area"
+  },
+  {
+    "name": "display_catchment",
+    "property": "Display_Catchment"
+  },
+  {
+    "name": "agency_name",
+    "property": "Agency_Name"
+  },
+  {
+    "name": "external_name",
+    "property": "External_Name"
+  },
+  {
+    "name": "location_info",
+    "property": "Location_Info"
+  },
+  {
+    "name": "x_coord_actual",
+    "property": "X_coord_Actual"
+  },
+  {
+    "name": "y_coord_actual",
+    "property": "Y_Coord_Actual"
+  },
+  {
+    "name": "actual_ngr",
+    "property": "Actual_NGR"
+  },
+  {
+    "name": "x_coord_display",
+    "property": "X_coord_Display"
+  },
+  {
+    "name": "y_coord_display",
+    "property": "Y_coord_Display"
+  },
+  {
+    "name": "site_max",
+    "property": "Site_Max"
+  },
+  {
+    "name": "wiski_river_name",
+    "property": "Wiski_River_Name"
+  },
+  {
+    "name": "date_open",
+    "property": "Date_Open"
+  },
+  {
+    "name": "stage_datum",
+    "property": "Stage_Datum"
+  },
+  {
+    "name": "period_of_record",
+    "property": "Period_of_Record"
+  },
+  {
+    "name": "por_max_value",
+    "property": "POR_Max_Value"
+  },
+  {
+    "name": "date_por_max",
+    "property": "Date_POR_Max"
+  },
+  {
+    "name": "highest_level",
+    "property": "Highest_Level"
+  },
+  {
+    "name": "date_highest_level",
+    "property": "Date_Highest_Level"
+  },
+  {
+    "name": "por_min_value",
+    "property": "POR_Min_Value"
+  },
+  {
+    "name": "date_por_min",
+    "property": "Date_POR_Min"
+  },
+  {
+    "name": "percentile_5",
+    "property": "percentile_5"
+  },
+  {
+    "name": "percentile_95",
+    "property": "percentile_95"
+  },
+  {
+    "name": "comments",
+    "property": "Comments"
+  },
+  {
+    "name": "d_stage_datum",
+    "property": "D_Stage_Datum"
+  },
+  {
+    "name": "d_period_of_record",
+    "property": "D_Period_of_Record"
+  },
+  {
+    "name": "d_por_max_value",
+    "property": "D_POR_Max_Value"
+  },
+  {
+    "name": "d_date_por_max",
+    "property": "D_Date_POR_Max"
+  },
+  {
+    "name": "d_highest_level",
+    "property": "D_Highest_Level"
+  },
+  {
+    "name": "d_date_highest_level",
+    "property": "D_Date_Highest_Level"
+  },
+  {
+    "name": "d_por_min_value",
+    "property": "D_POR_Min_Value"
+  },
+  {
+    "name": "d_date_por_min",
+    "property": "D_Date_POR_Min"
+  },
+  {
+    "name": "d_percentile_5",
+    "property": "D_percentile_5"
+  },
+  {
+    "name": "d_percentile_95",
+    "property": "D_percentile_95"
+  },
+  {
+    "name": "d_comments",
+    "property": "D_Comments"
+  },
+  {
+    "name": "status",
+    "property": "Status"
+  },
+  {
+    "name": "status_reason",
+    "property": "Status_Reason"
+  },
+  {
+    "name": "status_date",
+    "property": "Status_Date"
+  }
+]
