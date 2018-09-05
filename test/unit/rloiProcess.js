@@ -73,6 +73,3 @@ lab.experiment('RLOI processing', () => {
     }
   })
 })
-
-// TODO: complete tests for business logic, ie the data processing values
-// TODO: Cover 100% of function code

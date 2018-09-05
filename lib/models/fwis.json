@@ -1,0 +1,15 @@
+[
+  "fwa_code",
+  "fwa_key",
+  "description",
+  "region",
+  "area",
+  "tidal",
+  "severity",
+  "severity_value",
+  "warning_key",
+  "time_raised",
+  "severity_changed",
+  "rim_changed",
+  "rim"
+]
