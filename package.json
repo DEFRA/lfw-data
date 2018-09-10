@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/DEFRA/lfw-data.git"
   },
-  "author": "The Environment Agency",
+  "author": "DEFRA",
   "license": "OGL",
   "bugs": {
     "url": "https://github.com/DEFRA/lfw-data/issues"
