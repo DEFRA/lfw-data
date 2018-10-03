@@ -25,7 +25,7 @@ functions:
   ffoiProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-ffoiProcess
     handler: lib/functions/ffoiProcess.handler
-    timeout: 60
+    timeout: 120
   rloiProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiProcess
     handler: lib/functions/rloiProcess.handler
