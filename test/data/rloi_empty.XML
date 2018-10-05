@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<EATimeSeriesDataExchangeFormat xmlns="http://www.environment-agency.gov.uk/XMLSchemas/EATimeSeriesDataExchangeFormat" xmlns:md="http://www.environment-agency.gov.uk/XMLSchemas/EAMetadataFormat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.environment-agency.gov.uk/XMLSchemas/EATimeSeriesDataExchangeFormat EATimeSeriesDataExchangeFormat.xsd">
+	<md:Publisher>Environment Agency</md:Publisher>
+	<md:Source>EA Wales Regional Telemetry System</md:Source>
+	<md:Description>Automated telemetry data export process</md:Description>
+	<md:Creator>SCX 6</md:Creator>
+	<md:Date>2018-10-03</md:Date>
+	<md:Time>09:40:09</md:Time>
+	<md:Identifier>NTC901</md:Identifier>
+	<Station stationReference="067015_TG 132" region="EA Wales" stationName="Manley Hall No1 LVL-River Level" ngr="SJ3484041474">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="m" startDate="2018-10-03" startTime="09:15:00" endDate="2018-10-03" endTime="09:30:00">
+			<Value date="2018-10-03" time="09:15:00">0.452</Value>
+			<Value date="2018-10-03" time="09:30:00">0.451</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="066011_TG_9202" region="EA Wales" stationName="Cwmlanerch LVL" ngr="SH8011857978">
+		<SetofValues parameter="Water Level" qualifier="Stage" dataType="Instantaneous" period="15 min" units="m" startDate="2018-10-03" startTime="09:15:00" endDate="2018-10-03" endTime="09:30:00">
+			<Value date="2018-10-03" time="09:15:00">0.725</Value>
+			<Value date="2018-10-03" time="09:30:00">0.725</Value>
+		</SetofValues>
+	</Station>
+	<Station stationReference="059S0800W" region="EA Wales" stationName="Illston LVL" ngr="SS5563590462"/>
+</EATimeSeriesDataExchangeFormat>

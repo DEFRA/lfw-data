@@ -26,10 +26,12 @@ functions:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-ffoiProcess
     handler: lib/functions/ffoiProcess.handler
     timeout: 120
+    memorySize: 2048
   rloiProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiProcess
     handler: lib/functions/rloiProcess.handler
     timeout: 120
+    memorySize: 2048
   stationProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-stationProcess
     handler: lib/functions/stationProcess.handler
