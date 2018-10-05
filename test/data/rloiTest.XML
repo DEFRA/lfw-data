@@ -132,5 +132,11 @@
 			<Value date="2018-06-29" time="10:45:00">0.295</Value>
 			<Value date="2018-06-29" time="11:00:00">0.293</Value>
 		</SetofValues>
+		<SetofValues  dataType="Instantaneous" period="15 min" startDate="2018-06-29" startTime="10:15:00" endDate="2018-06-29" endTime="11:00:00">
+			<Value date="2018-06-29" time="10:15:00">0.293</Value>
+			<Value date="2018-06-29" time="10:30:00">0.294</Value>
+			<Value date="2018-06-29" time="10:45:00">0.295</Value>
+			<Value date="2018-06-29" time="11:00:00">0.293</Value>
+		</SetofValues>
 	</Station>
 </EATimeSeriesDataExchangeFormat>

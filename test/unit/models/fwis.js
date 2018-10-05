@@ -1,64 +1,32 @@
-'use strict'
-
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
 const fs = require('fs')
-const handler = require('../../lib/functions/fwisProcess').handler
-let s3 = require('../../lib/helpers/s3')
-const event = require('../events/fwisEvent.json')
-const db = require('../../lib/helpers/db')
+const Fwis = require('../../../lib/models/fwis')
+const util = new (require('../../../lib/helpers/util'))()
+const Db = require('../../../lib/helpers/db')
 
-lab.experiment('fwis processing', () => {
-  lab.beforeEach(async () => {
-    s3.getObject = (params) => {
-      return new Promise((resolve, reject) => {
-        resolve({
-          Body: fs.readFileSync('./test/data/fwis-bigEvent.xml')
-        })
-      })
-    }
+// start up Sinon sandbox
+const sinon = require('sinon').createSandbox()
 
-    // Mock database call
-    db.query = (query, vars) => {
+lab.experiment('fwis model', () => {
+  lab.beforeEach(() => {
+    // set the db mock
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
       return new Promise((resolve, reject) => {
         resolve({})
       })
-    }
+    })
   })
 
-  lab.test('fwis process', async () => {
-    try {
-      await handler(event)
-    } catch (err) {
-      throw err
-    }
+  lab.afterEach(() => {
+    sinon.restore()
   })
 
-  lab.test('xml Error', async () => {
-    s3.getObject = (params) => {
-      return new Promise((resolve, reject) => {
-        resolve({
-          Body: 'xml></xml>'
-        })
-      })
-    }
-    try {
-      await handler(event)
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
-  })
-
-  lab.test('Test fields BST date', async () => {
-    s3.getObject = (params) => {
-      return new Promise((resolve, reject) => {
-        resolve({
-          Body: fs.readFileSync('./test/data/fwis-smallEventBST.xml')
-        })
-      })
-    }
-    db.query = (query, vars) => {
+  lab.test('Test BST date', async () => {
+    sinon.restore()
+    // Mock the db query to check the values we're inserting
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
       if (query.text && query.text.indexOf('INSERT INTO "current_fwis"') > -1) {
         Code.expect(query.values[0]).to.equal('033WAF312')
         Code.expect(query.values[1]).to.equal('156542')
@@ -86,28 +54,21 @@ lab.experiment('fwis processing', () => {
         Code.expect(query.values[23]).to.equal('2018-09-20T17:38:00.000Z')
         Code.expect(query.values[24]).to.equal('2018-09-20T17:38:00.000Z')
         Code.expect(query.values[25]).to.contain('Heavy rain has fallen within the R')
-      } else {
-        return new Promise((resolve, reject) => {
-          resolve({})
-        })
       }
-    }
-    try {
-      await handler(event)
-    } catch (err) {
-      throw err
-    }
+      return new Promise((resolve, reject) => {
+        resolve({})
+      })
+    })
+    const db = new Db()
+    const fwis = new Fwis(db)
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-smallEventBST.xml'))
+    await fwis.save(file, 10000)
   })
 
-  lab.test('Test fields GMT date', async () => {
-    s3.getObject = (params) => {
-      return new Promise((resolve, reject) => {
-        resolve({
-          Body: fs.readFileSync('./test/data/fwis-smallEventGMT.xml')
-        })
-      })
-    }
-    db.query = (query, vars) => {
+  lab.test('Test GMT date', async () => {
+    sinon.restore()
+    // Mock the db query to check the values we're inserting
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
       if (query.text && query.text.indexOf('INSERT INTO "current_fwis"') > -1) {
         Code.expect(query.values[0]).to.equal('033WAF312')
         Code.expect(query.values[1]).to.equal('156542')
@@ -135,31 +96,38 @@ lab.experiment('fwis processing', () => {
         Code.expect(query.values[23]).to.equal('2018-11-20T18:38:00.000Z')
         Code.expect(query.values[24]).to.equal('2018-11-20T18:38:00.000Z')
         Code.expect(query.values[25]).to.contain('Heavy rain has fallen within the R')
-      } else {
-        return new Promise((resolve, reject) => {
-          resolve({})
-        })
       }
-    }
-    try {
-      await handler(event)
-    } catch (err) {
-      throw err
-    }
+      return new Promise((resolve, reject) => {
+        resolve({})
+      })
+    })
+    const db = new Db()
+    const fwis = new Fwis(db)
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-smallEventGMT.xml'))
+    await fwis.save(file, 10000)
   })
 
-  lab.test('No warnings', async () => {
-    s3.getObject = (params) => {
+  lab.test('Big warnings file', async () => {
+    sinon.restore()
+    // Mock the db query to check the values we're inserting
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+      if (query.text && query.text.indexOf('INSERT INTO "current_fwis"') > -1) {
+        Code.expect(query.values.length).to.equal(4563)
+      }
       return new Promise((resolve, reject) => {
-        resolve({
-          Body: fs.readFileSync('./test/data/fwis-noWarnings.xml')
-        })
+        resolve({})
       })
-    }
-    try {
-      await handler(event)
-    } catch (err) {
-      throw err
-    }
+    })
+    const db = new Db()
+    const fwis = new Fwis(db)
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-bigEvent.xml'))
+    await fwis.save(file, 10000)
+  })
+
+  lab.test('Empty warnings file', async () => {
+    const db = new Db()
+    const fwis = new Fwis(db)
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-noWarnings.xml'))
+    await fwis.save(file, 10000)
   })
 })
