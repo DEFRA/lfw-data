@@ -54,7 +54,8 @@ lab.experiment('rloi model', () => {
   })
 
   lab.test('RLOI process', async () => {
-    const db = new Db()
+    sinon.restore()
+    const db = sinon.createStubInstance(Db)
     const s3 = new S3()
     const file = await util.parseXml(fs.readFileSync('./test/data/rloiTest.XML'))
     const rloi = new Rloi(db, s3, util)
@@ -62,7 +63,6 @@ lab.experiment('rloi model', () => {
   })
 
   lab.test('RLOI process empty values', async () => {
-    Db.prototype.query.restore()
     const db = new Db()
     const s3 = new S3()
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi_empty.XML'))
@@ -83,6 +83,7 @@ lab.experiment('rloi model', () => {
     const rloi = new Rloi(db, s3, util)
     rloi.save(file, 's3://devlfw', 'testkey')
   })
+
   lab.test('RLOI process no station', async () => {
     S3.prototype.getObject.restore()
     sinon.stub(S3.prototype, 'getObject').callsFake(() => {

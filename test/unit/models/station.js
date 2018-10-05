@@ -30,7 +30,7 @@ lab.experiment('station model', () => {
   })
 
   lab.test('Station save to database', async () => {
-    const db = new Db()
+    const db = new Db(true)
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
@@ -38,7 +38,7 @@ lab.experiment('station model', () => {
   })
 
   lab.test('Station save to object', async () => {
-    const db = new Db()
+    const db = new Db(true)
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
@@ -48,7 +48,7 @@ lab.experiment('station model', () => {
   lab.test('production console log', async () => {
     const stage = process.env.stage
     process.env.stage = 'ea'
-    const db = new Db()
+    const db = new Db(true)
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
@@ -67,7 +67,7 @@ lab.experiment('station model', () => {
         }
       })
     })
-    const db = new Db()
+    const db = new Db(true)
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
@@ -85,7 +85,7 @@ lab.experiment('station model', () => {
         reject(new Error())
       })
     })
-    const db = new Db()
+    const db = new Db(true)
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
