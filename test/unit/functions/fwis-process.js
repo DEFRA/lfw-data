@@ -1,8 +1,8 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
-const handler = require('../../../lib/functions/fwisProcess').handler
-const event = require('../../events/fwisEvent.json')
+const handler = require('../../../lib/functions/fwis-process').handler
+const event = require('../../events/fwis-event.json')
 let S3 = require('../../../lib/helpers/s3')
 let Util = require('../../../lib/helpers/util')
 let Fwis = require('../../../lib/models/fwis')
@@ -14,19 +14,13 @@ lab.experiment('fwis processing', () => {
   lab.beforeEach(() => {
     // setup mocks
     sinon.stub(S3.prototype, 'getObject').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     sinon.stub(Fwis.prototype, 'save').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
   })
   lab.afterEach(() => {
@@ -39,9 +33,7 @@ lab.experiment('fwis processing', () => {
 
   lab.test('fwis process S3 error', async () => {
     S3.prototype.getObject = () => {
-      return new Promise((resolve, reject) => {
-        reject(new Error('test error'))
-      })
+      return Promise.reject(new Error('Test error'))
     }
     try {
       await handler(event)

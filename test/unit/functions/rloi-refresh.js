@@ -1,9 +1,7 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
-const handler = require('../../../lib/functions/rloiRefresh').handler
-// let Db = require('../../../lib/helpers/db')
-
+const handler = require('../../../lib/functions/rloi-refresh').handler
 const Station = require('../../../lib/models/station')
 const Rloi = require('../../../lib/models/rloi')
 
@@ -14,14 +12,10 @@ lab.experiment('rloi Refresh', () => {
   lab.beforeEach(async () => {
     // Mock database call
     sinon.stub(Station.prototype, 'refreshStationMview').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     sinon.stub(Rloi.prototype, 'deleteOld').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
   })
 
@@ -36,9 +30,7 @@ lab.experiment('rloi Refresh', () => {
   lab.test('rloi Refresh error', async () => {
     Station.prototype.refreshStationMview.restore()
     sinon.stub(Station.prototype, 'refreshStationMview').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        reject(new Error('test error'))
-      })
+      return Promise.reject(new Error('test error'))
     })
     try {
       await handler()

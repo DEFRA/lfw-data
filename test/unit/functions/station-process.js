@@ -1,47 +1,46 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
-const handler = require('../../../lib/functions/rloiProcess').handler
-const event = require('../../events/fwisEvent.json')
+const handler = require('../../../lib/functions/station-process').handler
+const event = require('../../events/station-event.json')
 let S3 = require('../../../lib/helpers/s3')
 let Util = require('../../../lib/helpers/util')
-let Rloi = require('../../../lib/models/rloi')
+let Station = require('../../../lib/models/station')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
 
-lab.experiment('rloi processing', () => {
+lab.experiment('station processing', () => {
   lab.beforeEach(() => {
     // setup mocks
     sinon.stub(S3.prototype, 'getObject').callsFake(() => {
       return new Promise((resolve, reject) => {
-        resolve({})
+        resolve({
+          Body: 'test'
+        })
       })
     })
-    sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+    sinon.stub(Util.prototype, 'parseCsv').callsFake(() => {
+      return Promise.resolve({})
     })
-    sinon.stub(Rloi.prototype, 'save').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+    sinon.stub(Station.prototype, 'saveToDb').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Station.prototype, 'saveToObjects').callsFake(() => {
+      return Promise.resolve({})
     })
   })
   lab.afterEach(() => {
     // restore sinon sandbox
     sinon.restore()
   })
-  lab.test('rloi process', async () => {
+  lab.test('station process', async () => {
     await handler(event)
   })
 
-  lab.test('rloi process S3 error', async () => {
+  lab.test('station process S3 error', async () => {
     S3.prototype.getObject = () => {
-      return new Promise((resolve, reject) => {
-        reject(new Error('test error'))
-      })
+      return Promise.reject(new Error('test error'))
     }
     try {
       await handler(event)

@@ -13,9 +13,7 @@ lab.experiment('fwis model', () => {
   lab.beforeEach(() => {
     // set the db mock
     sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
   })
 
@@ -55,13 +53,11 @@ lab.experiment('fwis model', () => {
         Code.expect(query.values[24]).to.equal('2018-09-20T17:38:00.000Z')
         Code.expect(query.values[25]).to.contain('Heavy rain has fallen within the R')
       }
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     const db = new Db(true)
     const fwis = new Fwis(db)
-    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-smallEventBST.xml'))
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-small-event-BST.xml'))
     await fwis.save(file, 10000)
   })
 
@@ -97,13 +93,11 @@ lab.experiment('fwis model', () => {
         Code.expect(query.values[24]).to.equal('2018-11-20T18:38:00.000Z')
         Code.expect(query.values[25]).to.contain('Heavy rain has fallen within the R')
       }
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     const db = new Db(true)
     const fwis = new Fwis(db)
-    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-smallEventGMT.xml'))
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-small-event-GMT.xml'))
     await fwis.save(file, 10000)
   })
 
@@ -114,20 +108,18 @@ lab.experiment('fwis model', () => {
       if (query.text && query.text.indexOf('INSERT INTO "current_fwis"') > -1) {
         Code.expect(query.values.length).to.equal(4563)
       }
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     const db = new Db(true)
     const fwis = new Fwis(db)
-    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-bigEvent.xml'))
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-big-event.xml'))
     await fwis.save(file, 10000)
   })
 
   lab.test('Empty warnings file', async () => {
     const db = new Db(true)
     const fwis = new Fwis(db)
-    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-noWarnings.xml'))
+    const file = await util.parseXml(fs.readFileSync('./test/data/fwis-no-warnings.xml'))
     await fwis.save(file, 10000)
   })
 })
