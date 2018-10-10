@@ -15,14 +15,10 @@ lab.experiment('station model', () => {
   lab.beforeEach(() => {
     // setup mocks
     sinon.stub(S3.prototype, 'putObject').callsFake(() => {
-      return new Promise((resolve) => {
-        resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
-      })
+      return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+    sinon.stub(Db.prototype, 'query').callsFake(() => {
+      return Promise.resolve({})
     })
   })
   lab.afterEach(() => {
@@ -61,9 +57,9 @@ lab.experiment('station model', () => {
     sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
       return new Promise((resolve, reject) => {
         if (params.Key.indexOf('stations.json') > -1) {
-          resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
+          return resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
         } else {
-          reject(new Error('test error'))
+          return reject(new Error('test error'))
         }
       })
     })
@@ -81,9 +77,7 @@ lab.experiment('station model', () => {
   lab.test('db error', async () => {
     Db.prototype.query.restore()
     sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return new Promise((resolve, reject) => {
-        reject(new Error())
-      })
+      return Promise.reject(new Error('test error'))
     })
     const db = new Db(true)
     const s3 = new S3()

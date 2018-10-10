@@ -16,7 +16,7 @@
              "-f",
              "ffoiProcess",
              "--path",
-             "./test/events/ffoiEvent.json"
+             "./test/events/ffoi-event.json"
          ]
      },
      {
@@ -30,7 +30,7 @@
            "-f",
            "rloiProcess",
            "--path",
-           "./test/events/rloiEvent.json"
+           "./test/events/rloi-event.json"
        ]
    },
    {
@@ -44,7 +44,7 @@
            "-f",
            "stationProcess",
            "--path",
-           "./test/events/stationEvent.json"
+           "./test/events/station-event.json"
        ]
    }, {
        "type": "node",
@@ -65,7 +65,7 @@
             "-f",
             "fwisProcess",
             "--path",
-            "./test/events/fwisEvent.json"
+            "./test/events/fwis-event.json"
         ]
     }, {
         "type": "node",
@@ -78,7 +78,7 @@
             "-f",
             "rloiRefresh",
             "--path",
-            "./test/events/fwisEvent.json"
+            "./test/events/fwis-event.json"
         ]
     }
   ]

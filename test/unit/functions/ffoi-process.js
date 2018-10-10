@@ -3,12 +3,12 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const Code = require('code')
-const handler = require('../../../lib/functions/ffoiProcess').handler
-const event = require('../../events/ffoiEvent.json')
+const handler = require('../../../lib/functions/ffoi-process').handler
+const event = require('../../events/ffoi-event.json')
 
-let S3 = require('../../../lib/helpers/s3')
-let Util = require('../../../lib/helpers/util')
-let Ffoi = require('../../../lib/models/ffoi')
+const S3 = require('../../../lib/helpers/s3')
+const Util = require('../../../lib/helpers/util')
+const Ffoi = require('../../../lib/models/ffoi')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -17,19 +17,13 @@ lab.experiment('FFOI processing', () => {
   lab.beforeEach(async () => {
     // setup mocks
     sinon.stub(S3.prototype, 'getObject').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
     sinon.stub(Ffoi.prototype, 'save').callsFake(() => {
-      return new Promise((resolve, reject) => {
-        resolve({})
-      })
+      return Promise.resolve({})
     })
   })
   lab.afterEach(() => {
@@ -43,9 +37,7 @@ lab.experiment('FFOI processing', () => {
 
   lab.test('ffoi process S3 error', async () => {
     S3.prototype.getObject = () => {
-      return new Promise((resolve, reject) => {
-        reject(new Error('test error'))
-      })
+      return Promise.reject(new Error('test error'))
     }
     try {
       await handler(event)
