@@ -3,6 +3,7 @@ const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
 const lambda = new AWS.Lambda()
+AWS.config.update({ region: process.env.LFW_TARGET_REGION })
 const fs = require('fs')
 
 lab.experiment('Test stationProcess lambda invoke', () => {

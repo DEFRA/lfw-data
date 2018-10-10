@@ -2,6 +2,7 @@
 const Lab = require('lab')
 const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
+AWS.config.update({ region: process.env.LFW_TARGET_REGION })
 const lambda = new AWS.Lambda()
 const s3 = new AWS.S3()
 
