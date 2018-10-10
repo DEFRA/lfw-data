@@ -57,6 +57,14 @@
    }, {
         "type": "node",
         "request": "launch",
+        "name": "debug integration tests",
+        "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/lab",
+        "args": [
+            "test/integration"
+        ]
+    },{
+        "type": "node",
+        "request": "launch",
         "name": "run fwisProcess function",
         "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
         "args": [
