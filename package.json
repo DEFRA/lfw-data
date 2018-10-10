@@ -4,9 +4,9 @@
   "description": "Serverless (AWS Lambda) project for LFW data processing",
   "scripts": {
     "deploy": "sls deploy -v --force",
-    "integration-test": "lab test/integration -v -r console -o stdout -r html -o test/output-integration.html -m 30000",
+    "integration-test": "lab test/integration -v -r console -o stdout -r junit -o test/output-integration.xml -m 30000",
     "lint": "standard",
-    "unit-test": "lab test/unit -c -r console -o stdout -r lcov -o lcov.info",
+    "unit-test": "lab test/unit -c -r console -o stdout -r lcov -o lcov.info -r junit -o test/output-unit.xml",
     "post-deployment-test": "npm run integration-test",
     "pre-deployment-test": "npm run lint && npm run unit-test",
     "test": "npm run lint && npm run unit-test"
