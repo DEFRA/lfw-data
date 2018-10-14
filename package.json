@@ -30,7 +30,7 @@
   "dependencies": {
     "aws-sdk": "2.331.0",
     "csvtojson": "2.0.8",
-    "joi": "13.7.0",
+    "joi": "14.0.0",
     "moment-timezone": "0.5.21",
     "pg": "7.5.0",
     "proxy-agent": "3.0.3",
