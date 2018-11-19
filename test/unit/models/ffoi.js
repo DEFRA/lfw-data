@@ -10,6 +10,7 @@ const s3PutSchema = require('../../schemas/s3-put')
 const Ffoi = require('../../../lib/models/ffoi')
 const S3 = require('../../../lib/helpers/s3')
 const util = new (require('../../../lib/helpers/util'))()
+const Db = require('../../../lib/helpers/db')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -17,6 +18,10 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('ffoi model', () => {
   lab.beforeEach(() => {
     sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
+      return Promise.resolve({})
+    })
+    // set the db mock
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
       return Promise.resolve({})
     })
   })
@@ -28,6 +33,9 @@ lab.experiment('ffoi model', () => {
 
   lab.test('FFOI happy process', async () => {
     sinon.restore()
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+      return Promise.resolve({})
+    })
     sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
       let result = Joi.validate(params, s3PutSchema)
       Code.expect(result.error).to.be.null()
@@ -37,7 +45,8 @@ lab.experiment('ffoi model', () => {
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
     const s3 = new S3()
-    const ffoi = new Ffoi(s3)
+    const db = new Db()
+    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
     await ffoi.save(file, 's3://devlfw', 'testKey')
   })
@@ -47,8 +56,12 @@ lab.experiment('ffoi model', () => {
     sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
       return Promise.reject(new Error('test error'))
     })
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+      return Promise.resolve({})
+    })
     const s3 = new S3()
-    const ffoi = new Ffoi(s3)
+    const db = new Db()
+    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
     await ffoi.save(file, 's3://devlfw', 'testkey')
     // process continues and logs error to console
@@ -56,7 +69,8 @@ lab.experiment('ffoi model', () => {
 
   lab.test('File with no water level data', async () => {
     const s3 = new S3()
-    const ffoi = new Ffoi(s3)
+    const db = new Db()
+    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-no-water-level.xml'))
     await ffoi.save(file, 's3://devlfw', 'testkey')
   })
@@ -64,7 +78,8 @@ lab.experiment('ffoi model', () => {
   lab.test('production console log', async () => {
     const stage = process.env.stage
     const s3 = new S3()
-    const ffoi = new Ffoi(s3)
+    const db = new Db()
+    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
     process.env.stage = 'ea'
     await ffoi.save(file, 's3://devlfw', 'testkey')
