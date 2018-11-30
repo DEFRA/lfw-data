@@ -51,6 +51,26 @@ lab.experiment('ffoi model', () => {
     await ffoi.save(file, 's3://devlfw', 'testKey')
   })
 
+  lab.test('FFOI old file no useful values', async () => {
+    sinon.restore()
+    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+      return Promise.resolve({})
+    })
+    sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
+      let result = Joi.validate(params, s3PutSchema)
+      Code.expect(result.error).to.be.null()
+      const file = JSON.parse(params.Body)
+      result = Joi.validate(file, ffoiSchema)
+      Code.expect(result.error).to.be.null()
+      return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
+    })
+    const s3 = new S3()
+    const db = new Db()
+    const ffoi = new Ffoi(s3, db)
+    const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-old.xml'))
+    await ffoi.save(file, 's3://devlfw', 'testKey')
+  })
+
   lab.test('S3 put error', async () => {
     sinon.restore()
     sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
