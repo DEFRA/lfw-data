@@ -10,7 +10,7 @@ lab.experiment('Test stationProcess lambda invoke', () => {
   lab.test('stationProcess invoke', async () => {
     try {
       const data = await lambda.invoke({
-        FunctionName: `${process.env.LFW_SLS_BUCKET}-stationProcess`,
+        FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-stationProcess`,
         InvocationType: 'RequestResponse',
         Payload: fs.readFileSync('./test/events/station-event.json')
       }).promise()

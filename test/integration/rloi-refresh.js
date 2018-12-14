@@ -8,7 +8,7 @@ const lambda = new AWS.Lambda()
 lab.experiment('Test rloirefresh lambda invoke', () => {
   lab.test('rloiRefresh invoke', async () => {
     try {
-      const data = await lambda.invoke({ FunctionName: `${process.env.LFW_SLS_BUCKET}-rloiRefresh` }).promise()
+      const data = await lambda.invoke({ FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-rloiRefresh` }).promise()
       if (data.StatusCode !== 200) {
         throw new Error('rloirefresh non 200 response')
       }
