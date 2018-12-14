@@ -3,7 +3,7 @@
     {
       "s3": {
         "bucket": {
-          "name": "devlfw"
+          "name": "devlfws3bkt001"
         },
         "object": {
           "key": "fwfidata/ENT_7010/rloiStationData.csv"

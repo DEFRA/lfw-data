@@ -3,7 +3,7 @@
     {
       "s3": {
         "bucket": {
-          "name": "devlfw"
+          "name": "devlfws3bkt001"
         },
         "object": {
           "key": "testfwis/fwis-1479810603.xml"

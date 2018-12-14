@@ -3,7 +3,7 @@
     {
       "s3": {
         "bucket": {
-          "name": "devlfw"
+          "name": "devlfws3bkt001"
         },
         "object": {
           "key": "fwfidata/rloi/THTSTHFS20181005080159868.XML"
