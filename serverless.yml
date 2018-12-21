@@ -27,11 +27,13 @@ functions:
     handler: lib/functions/ffoi-process.handler
     timeout: 120
     memorySize: 2048
+    reservedConcurrency: 20
   rloiProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiProcess
     handler: lib/functions/rloi-process.handler
     timeout: 120
     memorySize: 2048
+    reservedConcurrency: 20
   stationProcess:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-stationProcess
     handler: lib/functions/station-process.handler
