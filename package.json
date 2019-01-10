@@ -34,7 +34,7 @@
     "moment-timezone": "0.5.23",
     "pg": "7.7.1",
     "proxy-agent": "3.0.3",
-    "serverless": "1.35.1",
+    "serverless": "1.36.0",
     "sinon": "7.2.2",
     "sql": "0.78.0",
     "xml2js": "0.4.19"
