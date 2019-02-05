@@ -1,4 +1,4 @@
-service: lfw
+service: ${env:LFW_SERVICE_CODE}
 provider:
   name: aws
   stackName: ${env:LFW_TARGET_ENV_NAME}${self:service}
