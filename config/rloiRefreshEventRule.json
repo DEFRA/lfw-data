@@ -1,6 +1,6 @@
 {
   "Description": "Event rule to schedule the rloiRefresh lambda execution",
-  "Name": "{{stage}}{{service}}RloiRefreshRule",
+  "Name": "{{stage}}lfpRloiRefreshRule",
   "RoleArn": "{{lambdaRoleArn}}",
   "ScheduleExpression": "cron(1,16,31,46 * * * ? *)",
   "State": "ENABLED"
