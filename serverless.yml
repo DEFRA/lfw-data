@@ -11,6 +11,7 @@ provider:
   deploymentBucket:
     name: ${env:LFW_SLS_BUCKET}
   environment:
+    service: ${env:LFW_SERVICE_CODE}
     stage: ${env:LFW_TARGET_ENV_NAME}
     LFW_DB_CONNECTION: ${env:LFW_DB_CONNECTION}
   vpc:
