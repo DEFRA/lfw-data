@@ -5,6 +5,7 @@ provider:
   runtime: nodejs12.x
   role: ${env:LFW_SLS_LAMBA_ROLE}
   stage: ${env:LFW_TARGET_ENV_NAME}
+  service_code: ${env:LFW_SERVICE_CODE}
   region: ${env:LFW_TARGET_REGION}
   profile: ${env:LFW_AWS_PROFILE}
   deploymentBucket:
