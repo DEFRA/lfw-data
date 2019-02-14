@@ -9,7 +9,7 @@
          "type": "node",
          "request": "launch",
          "name": "run ffoiProcess function",
-         "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
+         "program": "${workspaceFolder}/node_modules/.bin/sls",
          "args": [
              "invoke",
              "local",
@@ -23,7 +23,7 @@
        "type": "node",
        "request": "launch",
        "name": "run rloiProcess function",
-       "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
+       "program": "${workspaceFolder}/node_modules/.bin/sls",
        "args": [
            "invoke",
            "local",
@@ -37,7 +37,7 @@
        "type": "node",
        "request": "launch",
        "name": "run stationProcess function",
-       "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
+       "program": "${workspaceFolder}/node_modules/.bin/sls",
        "args": [
            "invoke",
            "local",
@@ -58,7 +58,7 @@
         "type": "node",
         "request": "launch",
         "name": "debug integration tests",
-        "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/lab",
+        "program": "${workspaceFolder}/node_modules/.bin/lab",
         "args": [
             "test/integration"
         ]
@@ -66,7 +66,7 @@
         "type": "node",
         "request": "launch",
         "name": "run fwisProcess function",
-        "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
+        "program": "${workspaceFolder}/node_modules/.bin/sls",
         "args": [
             "invoke",
             "local",
@@ -79,7 +79,7 @@
         "type": "node",
         "request": "launch",
         "name": "run rloiRefresh function",
-        "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/sls",
+        "program": "${workspaceFolder}/node_modules/.bin/sls",
         "args": [
             "invoke",
             "local",
