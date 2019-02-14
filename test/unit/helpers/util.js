@@ -25,11 +25,6 @@ lab.experiment('util.js', () => {
   })
 
   lab.test('parseXml', async () => {
-    try {
-      await util.parseXml('xml></xml>')
-      Code.expect(true).to.equal(false)
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
+    await Code.expect(util.parseXml('xml></xml>')).to.reject()
   })
 })
