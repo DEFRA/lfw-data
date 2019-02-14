@@ -39,11 +39,6 @@ lab.experiment('FFOI processing', () => {
     S3.prototype.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
-    try {
-      await handler(event)
-      Code.expect(true).to.equal(false)
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
+    await Code.expect(handler(event)).to.reject()
   })
 })
