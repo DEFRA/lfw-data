@@ -67,11 +67,8 @@ lab.experiment('station model', () => {
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    try {
-      await station.saveToObjects(stations)
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
+    // expect save to handle erring indivudal s3 puts
+    await station.saveToObjects(stations)
   })
 
   lab.test('db error', async () => {
@@ -83,10 +80,6 @@ lab.experiment('station model', () => {
     const s3 = new S3()
     const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    try {
-      await station.saveToDb(stations)
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
+    await Code.expect(station.saveToDb(stations)).to.reject()
   })
 })

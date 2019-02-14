@@ -32,10 +32,6 @@ lab.experiment('rloi Refresh', () => {
     sinon.stub(Station.prototype, 'refreshStationMview').callsFake(() => {
       return Promise.reject(new Error('test error'))
     })
-    try {
-      await handler()
-    } catch (err) {
-      Code.expect(err).to.be.an.error()
-    }
+    await Code.expect(handler()).to.reject()
   })
 })

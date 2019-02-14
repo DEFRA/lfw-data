@@ -50,7 +50,7 @@
        "type": "node",
        "request": "launch",
        "name": "debug unit tests",
-       "program": "/home/tedd/.nvm/versions/node/v8.11.1/bin/lab",
+       "program": "${workspaceFolder}/node_modules/.bin/lab",
         "args": [
             "test/unit"
         ]
