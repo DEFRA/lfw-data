@@ -1,5 +1,5 @@
 'use strict'
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
 AWS.config.update({ region: process.env.LFW_TARGET_REGION })

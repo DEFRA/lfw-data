@@ -1,6 +1,6 @@
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
-const Code = require('code')
+const Code = require('@hapi/code')
 const Joi = require('joi')
 const fs = require('fs')
 const rloiValueParentSchema = require('../../schemas/rloi-value-parent')

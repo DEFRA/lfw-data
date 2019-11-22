@@ -1,6 +1,6 @@
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
-const Code = require('code')
+const Code = require('@hapi/code')
 const fs = require('fs')
 const Joi = require('joi')
 const ffoiSchema = require('../../schemas/ffoi')
