@@ -1,9 +1,9 @@
 'use strict'
 
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const fs = require('fs')
-const Code = require('code')
+const Code = require('@hapi/code')
 const s3 = new (require('../../lib/helpers/s3'))()
 const xml = fs.readFileSync('./test/data/ffoi-test.xml')
 

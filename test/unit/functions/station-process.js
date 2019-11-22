@@ -1,6 +1,6 @@
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
-const Code = require('code')
+const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/station-process').handler
 const event = require('../../events/station-event.json')
 let S3 = require('../../../lib/helpers/s3')

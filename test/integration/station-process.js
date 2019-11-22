@@ -1,5 +1,5 @@
 'use strict'
-const Lab = require('lab')
+const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
 const lambda = new AWS.Lambda()
