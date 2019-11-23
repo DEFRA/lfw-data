@@ -2,7 +2,7 @@ service: lfw
 provider:
   name: aws
   stackName: ${env:LFW_TARGET_ENV_NAME}${self:service}
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   role: ${env:LFW_SLS_LAMBA_ROLE}
   stage: ${env:LFW_TARGET_ENV_NAME}
   region: ${env:LFW_TARGET_REGION}

@@ -1,6 +1,6 @@
 {
   "name": "lfw-data",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Serverless (AWS Lambda) project for LFW data processing",
   "scripts": {
     "deploy": "sls deploy -v --force",
