@@ -3,9 +3,9 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/fwis-process').handler
 const event = require('../../events/fwis-event.json')
-let S3 = require('../../../lib/helpers/s3')
-let Util = require('../../../lib/helpers/util')
-let Fwis = require('../../../lib/models/fwis')
+const S3 = require('../../../lib/helpers/s3')
+const Util = require('../../../lib/helpers/util')
+const Fwis = require('../../../lib/models/fwis')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()

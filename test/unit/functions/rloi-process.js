@@ -3,9 +3,9 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/rloi-process').handler
 const event = require('../../events/fwis-event.json')
-let S3 = require('../../../lib/helpers/s3')
-let Util = require('../../../lib/helpers/util')
-let Rloi = require('../../../lib/models/rloi')
+const S3 = require('../../../lib/helpers/s3')
+const Util = require('../../../lib/helpers/util')
+const Rloi = require('../../../lib/models/rloi')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
