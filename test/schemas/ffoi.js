@@ -1,6 +1,6 @@
-const Joi = require('joi')
+const Joi = require('@hapi/joi')
 
-module.exports = Joi.object().keys({
+module.exports = Joi.object({
   $: Joi.object().keys({
     date: Joi.string(),
     key: Joi.string().required(),

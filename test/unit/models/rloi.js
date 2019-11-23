@@ -1,7 +1,6 @@
 const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
-const Joi = require('joi')
 const fs = require('fs')
 const rloiValueParentSchema = require('../../schemas/rloi-value-parent')
 const rloiValuesSchema = require('../../schemas/rloi-values')
@@ -26,15 +25,15 @@ lab.experiment('rloi model', () => {
       let resultQuery, resultVars
       if (typeof query === 'object') {
         // test values insert
-        resultQuery = Joi.validate(query, rloiValuesSchema.query)
+        resultQuery = rloiValuesSchema.query.validate(query)
       } else {
         // test value parent insert
-        resultQuery = Joi.validate(query, rloiValueParentSchema.query)
-        resultVars = Joi.validate(vars, rloiValueParentSchema.vars)
+        resultQuery = rloiValueParentSchema.query.validate(query)
+        resultVars = rloiValueParentSchema.vars.validate(vars)
       }
-      Code.expect(resultQuery.error).to.be.null()
+      Code.expect(resultQuery.error).to.be.undefined()
       if (resultVars) {
-        Code.expect(resultVars.error).to.be.null()
+        Code.expect(resultVars.error).to.be.undefined()
       }
 
       return new Promise((resolve, reject) => {
