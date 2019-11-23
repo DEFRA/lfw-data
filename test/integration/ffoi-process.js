@@ -9,25 +9,21 @@ const xml = fs.readFileSync('./test/data/ffoi-test.xml')
 
 lab.experiment('Test Lambda functionality post deployment', () => {
   lab.before(async () => {
-    try {
-      // load the test.XML file
-      let params = {
-        Body: xml,
-        Bucket: process.env.LFW_SLS_BUCKET,
-        Key: 'fwfidata/ENT_7024/test.XML'
-      }
-      console.log('putObject: ' + params.Key)
-      await s3.putObject(params)
-      // give lambda time to process the file
-      console.log('File loaded')
-      console.log('Pause 5 seconds')
-      await new Promise((resolve, reject) => {
-        setTimeout(resolve, 5000)
-      })
-      console.log('Pause finished')
-    } catch (err) {
-      throw err
+    // load the test.XML file
+    const params = {
+      Body: xml,
+      Bucket: process.env.LFW_SLS_BUCKET,
+      Key: 'fwfidata/ENT_7024/test.XML'
     }
+    console.log('putObject: ' + params.Key)
+    await s3.putObject(params)
+    // give lambda time to process the file
+    console.log('File loaded')
+    console.log('Pause 5 seconds')
+    await new Promise((resolve, reject) => {
+      setTimeout(resolve, 5000)
+    })
+    console.log('Pause finished')
   })
 
   lab.after(async () => {
@@ -60,7 +56,7 @@ lab.experiment('Test Lambda functionality post deployment', () => {
         } else {
           data = await s3.getObject({ Bucket: process.env.LFW_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
           Code.expect(data).to.not.be.null()
-          let ffoi = JSON.parse(data.Body)
+          const ffoi = JSON.parse(data.Body)
           Code.expect(ffoi.$.stationReference).to.equal('test' + i)
           Code.expect(ffoi.SetofValues.length).to.be.greaterThan(0)
           console.log('Tested: test' + i + '.json')

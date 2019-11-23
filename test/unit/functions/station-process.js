@@ -3,9 +3,9 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/station-process').handler
 const event = require('../../events/station-event.json')
-let S3 = require('../../../lib/helpers/s3')
-let Util = require('../../../lib/helpers/util')
-let Station = require('../../../lib/models/station')
+const S3 = require('../../../lib/helpers/s3')
+const Util = require('../../../lib/helpers/util')
+const Station = require('../../../lib/models/station')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
