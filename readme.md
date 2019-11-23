@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DEFRA/lfw-data.svg?branch=master)](https://travis-ci.org/DEFRA/lfw-data)[![Maintainability](https://api.codeclimate.com/v1/badges/f36df721e8bfd20f2f0b/maintainability)](https://codeclimate.com/github/DEFRA/lfw-data/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/f36df721e8bfd20f2f0b/test_coverage)](https://codeclimate.com/github/DEFRA/lfw-data/test_coverage) [![Greenkeeper badge](https://badges.greenkeeper.io/DEFRA/lfw-data.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/DEFRA/lfw-data.svg?branch=master)](https://travis-ci.org/DEFRA/lfw-data)[![Maintainability](https://api.codeclimate.com/v1/badges/f36df721e8bfd20f2f0b/maintainability)](https://codeclimate.com/github/DEFRA/lfw-data/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/f36df721e8bfd20f2f0b/test_coverage)](https://codeclimate.com/github/DEFRA/lfw-data/test_coverage)
 
 # lfw-data
 
