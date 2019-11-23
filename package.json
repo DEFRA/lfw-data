@@ -2,6 +2,9 @@
   "name": "lfw-data",
   "version": "1.0.0",
   "description": "Serverless (AWS Lambda) project for LFW data processing",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "deploy": "sls deploy -v --force",
     "integration-test": "lab test/integration -v -r console -o stdout -r junit -o test/output-integration.xml -m 30000",
