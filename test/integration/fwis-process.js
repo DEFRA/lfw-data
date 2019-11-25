@@ -28,7 +28,7 @@ lab.experiment('Test fwisProcess lambda invoke', () => {
       const key = data.Contents[0].Key
       payload.Records[0].s3.object.key = key
       await lambda.invoke({
-        FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-fwisProcess`,
+        FunctionName: `${process.env.LFW_TARGET_ENV_NAME}${process.env.LFW_SERVICE_CODE}-fwisProcess`,
         InvocationType: 'RequestResponse',
         Payload: JSON.stringify(payload)
       }).promise()

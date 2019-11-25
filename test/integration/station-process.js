@@ -4,16 +4,28 @@ const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
 const lambda = new AWS.Lambda()
 AWS.config.update({ region: process.env.LFW_TARGET_REGION })
-const fs = require('fs')
 
 lab.experiment('Test stationProcess lambda invoke', () => {
   lab.test('stationProcess invoke', async () => {
+    const event = {
+      Records: [
+        {
+          s3: {
+            bucket: {
+              name: process.env.LFW_SLS_BUCKET
+            },
+            object: {
+              key: 'fwfidata/ENT_7010/rloiStationData.csv'
+            }
+          }
+        }
+      ]
+    }
     const data = await lambda.invoke({
-      FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-stationProcess`,
+      FunctionName: `${process.env.LFW_TARGET_ENV_NAME}${process.env.LFW_SERVICE_CODE}-stationProcess`,
       InvocationType: 'RequestResponse',
-      Payload: fs.readFileSync('./test/events/station-event.json')
+      Payload: JSON.stringify(event)
     }).promise()
-    console.log(data)
     if (data.StatusCode !== 200) {
       throw new Error('stationProcess non 200 response')
     }
