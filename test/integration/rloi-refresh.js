@@ -4,9 +4,13 @@ const lab = exports.lab = Lab.script()
 const AWS = require('aws-sdk')
 AWS.config.update({ region: process.env.LFW_TARGET_REGION })
 const lambda = new AWS.Lambda()
+const sts = new AWS.STS()
 
 lab.experiment('Test rloirefresh lambda invoke', () => {
   lab.test('rloiRefresh invoke', async () => {
+    const test = await sts.getCallerIdentity({}).promise()
+    console.log('USER?')
+    console.log(test)
     const data = await lambda.invoke({ FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-rloiRefresh` }).promise()
     if (data.StatusCode !== 200) {
       throw new Error('rloirefresh non 200 response')

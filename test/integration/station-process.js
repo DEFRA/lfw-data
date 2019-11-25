@@ -6,8 +6,14 @@ const lambda = new AWS.Lambda()
 AWS.config.update({ region: process.env.LFW_TARGET_REGION })
 const fs = require('fs')
 
+const sts = new AWS.STS()
+
 lab.experiment('Test stationProcess lambda invoke', () => {
   lab.test('stationProcess invoke', async () => {
+    const test = await sts.getCallerIdentity({}).promise()
+    console.log('USER?')
+    console.log(test)
+
     const data = await lambda.invoke({
       FunctionName: `${process.env.LFW_TARGET_ENV_NAME}lfw-stationProcess`,
       InvocationType: 'RequestResponse',
