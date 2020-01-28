@@ -48,3 +48,7 @@ functions:
     name: ${env:LFW_TARGET_ENV_NAME}${self:service}-fwisProcess
     handler: lib/functions/fwis-process.handler
     timeout: 120
+  fgsProcess:
+    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-fgsProcess
+    handler: lib/functions/fgs-process.hander
+    timeout: 60

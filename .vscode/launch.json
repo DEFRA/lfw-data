@@ -88,6 +88,19 @@
             "--path",
             "./test/events/fwis-event.json"
         ]
+    }, {
+        "type": "node",
+        "request": "launch",
+        "name": "run fgsProcess function",
+        "program": "${workspaceFolder}/node_modules/.bin/sls",
+        "args": [
+            "invoke",
+            "local",
+            "-f",
+            "fgsProcess",
+            "--path",
+            "./test/events/fwis-event.json"
+        ]
     }
   ]
 }
