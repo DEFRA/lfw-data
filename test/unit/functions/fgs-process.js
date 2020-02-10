@@ -3,7 +3,7 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/fgs-process').handler
 const S3 = require('../../../lib/helpers/s3')
-let wreck = require('../../../lib/helpers/wreck')
+const wreck = require('../../../lib/helpers/wreck')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
