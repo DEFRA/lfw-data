@@ -14,12 +14,15 @@ provider:
     service: ${env:LFW_SERVICE_CODE}
     stage: ${env:LFW_TARGET_ENV_NAME}
     LFW_DB_CONNECTION: ${env:LFW_DB_CONNECTION}
+    LFW_SLS_BUCKET: ${env:LFW_SLS_BUCKET}
   vpc:
     securityGroupIds:
       - ${env:LFW_VPN_SECURITY_GROUP}
     subnetIds:
       - ${env:LFW_SUBNET_1}
       - ${env:LFW_SUBNET_2}
+plugins:
+ - serverless-layers
 package:
  exclude:
    - test
