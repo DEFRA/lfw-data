@@ -12,12 +12,15 @@ provider:
   environment:
     stage: ${env:LFW_TARGET_ENV_NAME}
     LFW_DB_CONNECTION: ${env:LFW_DB_CONNECTION}
+    LFW_FWIS_API_KEY: ${env:LFW_FWIS_API_KEY}
   vpc:
     securityGroupIds:
       - ${env:LFW_VPN_SECURITY_GROUP}
     subnetIds:
       - ${env:LFW_SUBNET_1}
       - ${env:LFW_SUBNET_2}
+plugins:
+ - serverless-layers
 package:
  exclude:
    - test

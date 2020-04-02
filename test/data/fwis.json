@@ -1,0 +1,602 @@
+[
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels along the River Coln remain high but steady. The risk of flooding of roads, footpaths and low-lying land remains nearest the river, particularly in the Fosse Bridge and Fairford areas. Levels are expected to remain high over the coming days and will be sensitive to further rainfall.  Please remain aware of your local surroundings and stay safe by avoiding contact with flood water. \nThe forecast is for dry weather with some scattered showers until Sunday  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2368,
+            "taCode": "061WAF06Coln",
+            "taName": "River Coln and its tributaries",
+            "taDescription": "River Coln and its tributaries from Whittington to the confluence with The River Thames",
+            "quickDial": "171495",
+            "version": "4",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2015-10-27T00:00:00.000Z",
+            "lastModifiedDate": "2016-02-24T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-01-28T15:50:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:25:06.034Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels on the River Windrush remain high but steady. The risk of flooding to low-lying land and roads nearest the watercourse continues. Levels remain high in the Newbridge area but are slowly falling.  Elsewhere the river is back within banks. River levels are expected to remain high over the coming days and will be sensitive to further rainfall. \nPlease remain aware of your local surroundings and stay safe by avoiding contact with flood water. \nThe forecast is for dry weather with some scattered showers until Sunday.  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2364,
+            "taCode": "061WAF10Windrush",
+            "taName": "River Windrush from Bourton to Newbridge",
+            "taDescription": "River Windrush from Bourton to Newbridge including Burford, Asthall, Minster Lovell, Crawley, Witney, Ducklington, Rack End and Standlake",
+            "quickDial": "171075",
+            "version": "8",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2018-03-21T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-01-28T15:50:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:24:54.074Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels remain high but steady on the River Pang, particularly at Tidmarsh. Levels on the Sulham Brook are back within banks. The risk of flooding of low-lying land, footpaths and roads especially in the Tidmarsh area remains. Please remain aware of your local surroundings and stay safe by avoiding contact with flood water. \nThe forecast is for dry weather with some scattered showers until Sunday.  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2386,
+            "taCode": "061WAF21PangSulm",
+            "taName": "River Pang from East Ilsley to Pangbourne and Sulham Brook",
+            "taDescription": "River Pang from East Ilsley to Pangbourne, including Compton, Hampstead Norreys, Frilsham, Bucklebury, Stanford Dingley, Bradfield and Tidmarsh; and the Sulham Brook from Theale to Pangbourne including Sulham",
+            "quickDial": "171102",
+            "version": "5",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2015-07-21T00:00:00.000Z",
+            "lastModifiedDate": "2015-10-22T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-02-09T18:24:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:24:51.492Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels are high but stable on the River Lambourn as a result of high groundwater, particularly in the Eastbury area where the flood control structure continues to operate. \nLevels are high on the Winterbourne at Bagnor where the river is still out of banks and will be sensitive to further rainfall. The risk of flooding of low-lying land, footpaths and roads remains. Please remain aware of your local surroundings and stay safe by avoiding contact with flood waters. \nThe forecast is for dry weather with some scattered showers until Sunday.  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2384,
+            "taCode": "061WAF22Lambourn",
+            "taName": "River Lambourn and its tributaries from Upper Lambourn down to Newbury",
+            "taDescription": "River Lambourn from Lambourn to the Shaw area in Newbury including Eastbury, East Garston, Welford, Easton, Boxford, Woodspeen, Bagnor, Donnington, Great Shefford on the Great Shefford Stream and Winterbourne on the Winterbourne Stream",
+            "quickDial": "171017",
+            "version": "7",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2017-08-29T00:00:00.000Z",
+            "lastModifiedDate": "2017-10-19T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-02-15T17:38:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:24:33.488Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels remain high but stable on the River Kennet between Ramsbury and Newbury. Elsewhere, levels on the River Kennet and its tributaries are lower and within banks.\nThe risk of flooding to low-lying land, roads and footpaths remains in the Knighton area and will remain for some time. \nPlease remain aware of your local surroundings and stay safe by avoiding contact with flood water. \nThe forecast is for dry weather with some scattered showers until Sunday.  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2382,
+            "taCode": "061WAF22UpperKen",
+            "taName": "River Kennet and its tributaries from Berwick Bassett down to Newbury",
+            "taDescription": "River Kennet from Berwick Bassett to Newbury including Winterbourne Monkton, Marlborough, Ramsbury, Hungerford, Denford, Kintbury and Newbury; also the River Og, the River Aldbourne, the Froxfield Stream, the River Dun and the River Shalbourne",
+            "quickDial": "171008",
+            "version": "6",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2017-08-25T00:00:00.000Z",
+            "lastModifiedDate": "2017-10-19T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-02-14T20:04:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:24:24.295Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not currently expected. \nRiver levels remain high on the Ginge Brook, particularly at Steventon, but are still falling slowly.  Therefore, flooding of low-lying land, footpaths and roads may continue. River levels are expected to remain high over the coming days. They will be sensitive to further rainfall. Please remain aware of your local surroundings and stay safe by avoiding contact with flood water. \nThe forecast is for dry weather with some scattered showers until Sunday.  \nPlease refer to the 'River and Sea levels in England' webpage for current river levels and remain safe and aware of your local surroundings. \nThis message will be updated tomorrow, 03/04/20, or if the situation changes.\n ",
+        "attr": {
+            "taId": 2362,
+            "taCode": "061WAF23Ginge",
+            "taName": "Ginge Brook",
+            "taDescription": "Ginge Brook, for the Steventon area down to and including Sutton Courtenay",
+            "quickDial": "171192",
+            "version": "7",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2019-10-18T00:00:00.000Z",
+            "lastModifiedDate": "2019-12-05T00:00:00.000Z",
+            "situationChanged": "2020-04-02T07:24:00.000Z",
+            "severityChanged": "2020-02-09T18:23:00.000Z",
+            "timeMessageReceived": "2020-04-02T07:24:15.995Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The Nailbourne and Little Stour have been flowing since February. Groundwater levels have now peaked and so flows in the Nailbourne and Little Stour have stabilised. Some fords in Barham and Bridge are likely to remain closed for much of April. The Little Stour Flood Relief Channel is in partial operation at Littlebourne. Temporary defences operate in Barham. The internal flooding of residential properties at ground level is not expected. We are monitoring the situation continually and are coordinating efforts with local authorities and community leaders. Our incident response staff are attending weedscreens and culverts regularly. This Flood Alert is likely to remain in force until Friday 3 April when this message will be updated, or earlier if the situation changes.",
+        "attr": {
+            "taId": 1504,
+            "taCode": "064WAF6LittleStour",
+            "taName": "Nailbourne and Little Stour area",
+            "taDescription": "Communities on the Nailbourne, Little Stour and River Wingham, including Lyminge, Elham, Barham, Bridge, Bekesbourne, Littlebourne, Ickham, Wickhambreaux and Wingham",
+            "quickDial": "217026",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Kent, South London and East Sussex",
+            "createdDate": "2019-10-16T00:00:00.000Z",
+            "lastModifiedDate": "2019-10-16T00:00:00.000Z",
+            "situationChanged": "2020-04-01T10:28:00.000Z",
+            "severityChanged": "2020-03-05T19:05:00.000Z",
+            "timeMessageReceived": "2020-04-01T10:28:49.172Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels have responded to rainfall during February and the start of March and have risen at our observation borehole in Piddington in the Radnage Community and Hughendon Valley area. Groundwater levels are above normal for this time of year and have now reached a level where communities may be affected within the next few weeks by flooding from groundwater.\nWe expect levels to continue to rise slowly over the next few days and weeks. Low-lying land and roads will therefore be at risk of flooding. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer.\nWe are continuing to monitor groundwater levels and will update this message next week by 8 April 2020, or as the situation changes. ",
+        "attr": {
+            "taId": 2426,
+            "taCode": "061FAG25RagHuh",
+            "taName": "Groundwater flooding in the High Wycombe area",
+            "taDescription": "Areas at risk of groundwater flooding in the Wycombe area including Radnage and the lower Hughenden Valley",
+            "quickDial": "171906",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2015-11-30T00:00:00.000Z",
+            "lastModifiedDate": "2016-02-24T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:55:00.000Z",
+            "severityChanged": "2020-03-23T20:28:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:55:26.799Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": " Groundwater levels remain high and continue to rise very steadily at our observation borehole in Hodcott. Communities in the West Ilsley, East Ilsley, Compton, Chilton and West Hagbourne are in the groundwater alert area which may be affected within the next few days by groundwater flooding. Groundwater levels are above normal for this time of year. Low-lying land and roads will therefore be at risk of flooding first. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer and the speed at which flooding will occur will be dependent on rainfall conditions. The forecast is for a drier week (1 April to 8 April 2020) with potential for light rain showers at times. We are continuing to monitor groundwater levels and will update this message next week by 8 April 2020, or as the situation changes.",
+        "attr": {
+            "taId": 2264,
+            "taCode": "061FAG21IlsComp",
+            "taName": "Groundwater flooding in West Ilsley, East Ilsley, Compton, Chilton and West Hagbourne",
+            "taDescription": "Areas at risk of groundwater flooding in West Ilsley, East Ilsley, Compton, Chilton and West Hagbourne",
+            "quickDial": "171904",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2015-11-30T00:00:00.000Z",
+            "lastModifiedDate": "2016-02-24T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:55:00.000Z",
+            "severityChanged": "2020-02-13T20:36:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:55:19.667Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels are high at our Water Acre observation borehole in the Upper Aldbourne Valley. Groundwater has now reached a level where communities may be affected within days by flooding from groundwater. Levels have remained stable over the last week. Levels at the Water Acre observation borehole are just below the level where we would expect to see flooding impacts and there may already be locations where groundwater is flooding at the surface. Low-lying land and roads will be at risk of flooding first. Property flooding is possible longer-term. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer and the speed at which flooding will occur will be dependent on rainfall. The forecast is for a drier week with potential for light rain showers at times. We are continuing to monitor groundwater levels and will update this message next week by 8 April 2020, or as the situation changes. ",
+        "attr": {
+            "taId": 2265,
+            "taCode": "061FAG22AldbnVal",
+            "taName": "Groundwater flooding in the Upper Aldbourne Valley",
+            "taDescription": "Areas at risk of groundwater flooding in the Upper Albourne Valley including Aldbourne",
+            "quickDial": "171902",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2015-11-30T00:00:00.000Z",
+            "lastModifiedDate": "2016-02-24T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:55:00.000Z",
+            "severityChanged": "2020-01-31T10:09:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:55:12.769Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels remain high at our Longacre and Northfield Farm observation boreholes in the Lambourn Valley. Groundwater levels have reached a level where communities may be affected, particularly in the Mile End area. Levels have remained stable over the last week. Levels at the Longacre observation borehole are just below the level where we would expect to see flooding impacts and there may already be locations where groundwater is flooding at the surface. Low-lying land and roads will be at risk of flooding first. Property flooding is possible in the longer-term. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer and the speed at which flooding will occur will be dependent on rainfall conditions. The forecast is for a drier week with potential for light rain showers at times. We are continuing to monitor groundwater levels and will update this message next week, by 8 April 2020, or as the situation changes. ",
+        "attr": {
+            "taId": 2266,
+            "taCode": "061FAG22LamVal",
+            "taName": "Groundwater flooding in the Lambourn Valley catchment",
+            "taDescription": "Communities at risk of groundwater flooding in the Lambourn valley including several villages and Great Shefford",
+            "quickDial": "171903",
+            "version": "4",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2018-03-21T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:54:00.000Z",
+            "severityChanged": "2020-01-31T09:45:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:55:04.166Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The Buckskin area is currently unaffected by high groundwater levels. Groundwater levels are high but stable at our observation borehole, Tile Barn Farm, in the Basingstoke and Sherborne St John area. Groundwater levels are above normal for this time of year and have now reached a level where communities may be affected within the next few days by flooding from groundwater. \n\nLevels may rise again if we receive further rainfall across the area. Low-lying land and roads will therefore continue to be at risk of flooding. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer. We are continuing to monitor groundwater levels and will update this message next Wednesday (08/04/20), or as the situation changes.",
+        "attr": {
+            "taId": 2500,
+            "taCode": "061FAG24Basing",
+            "taName": "Groundwater flooding in the Basingstoke, Buckskin and Sherborne St John areas",
+            "taDescription": "Communities at risk of groundwater flooding in the Basingstoke, Buckskin and Sherborne St John areas",
+            "quickDial": "171907",
+            "version": "6",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2018-03-21T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:50:00.000Z",
+            "severityChanged": "2020-02-19T18:01:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:50:15.405Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not expected. River levels remain high but stable on the River Whitewater. Flooding of some roads and low lying areas remains possible, especially in the North Warnborough area. We expect river levels to remain high over the next few days and they remain sensitive to further rainfall. \n\nLevels on the River Hart have fallen and do not currently pose a flood risk. The latest weather forecast suggests it will be mainly dry today (01/04/20) and tomorrow (02/04/20). Please remain safe and aware of your local surroundings and refer to the 'River and Sea levels in England' webpage for current river levels. This message will be updated tomorrow (02/04/20) or as the situation changes.",
+        "attr": {
+            "taId": 2355,
+            "taCode": "061WAF24WhtWater",
+            "taName": "River Whitewater and River Hart",
+            "taDescription": "River Whitewater including North Warnborough, Hook and Riseley and the River Hart including Crondall, Crookham Village, Hartley Wintney, Riseley and Fleet",
+            "quickDial": "173293",
+            "version": "7",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2017-05-31T00:00:00.000Z",
+            "lastModifiedDate": "2017-08-02T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:46:00.000Z",
+            "severityChanged": "2020-02-09T17:14:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:46:16.029Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Property flooding is not expected. River levels remain high but stable on the River Wey in the Alton area due to high groundwater levels. Flooding of some low-lying land and roads is possible. The latest weather forecast suggests it will be mainly dry today (01/04/20) and tomorrow (02/04/20). \n\nWe expect river levels to remain high over the next few days and they remain sensitive to further rainfall. Please remain safe and aware of your local surroundings and refer to the 'River and Sea levels in England' webpage for current river levels. This message will be updated tomorrow (02/04/20) or as the situation changes.",
+        "attr": {
+            "taId": 2346,
+            "taCode": "061WAF30UpperWey",
+            "taName": "Upper River Wey",
+            "taDescription": "Upper River Wey including Alton, Farnham, Bordon, Frensham, Tilford, Godalming, Guildford and Peasmarsh",
+            "quickDial": "173396",
+            "version": "7",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2017-06-01T00:00:00.000Z",
+            "lastModifiedDate": "2017-08-02T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:45:00.000Z",
+            "severityChanged": "2020-02-13T08:48:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:46:08.573Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels are high but stable at our observation borehole, Farringdon, in the Alton, Chawton and Lower Farringdon area. Groundwater levels are above normal for this time of year and are now at a level where communities may be affected within the next few days by flooding from groundwater. \n\nLevels may rise again if we receive further rainfall across the area. Low-lying land and roads will therefore continue to be at risk of flooding. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer. We are continuing to monitor groundwater levels and will update this message next Wednesday (08/04/20), or as the situation changes.",
+        "attr": {
+            "taId": 2427,
+            "taCode": "061FAG30Alton",
+            "taName": "Groundwater flooding in the Alton area",
+            "taDescription": "Communities at risk of groundwater flooding in the Alton, Chawton and Lower Farringdon areas",
+            "quickDial": "171909",
+            "version": "4",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2018-03-21T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:45:00.000Z",
+            "severityChanged": "2020-02-14T11:03:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:46:00.454Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels are high but stable at our observation borehole, Tile Barn Farm, in the Crondall area. Groundwater levels are above normal for this time of year and have now reached a level where communities may be affected within the next few days by flooding from groundwater. \n\nLevels may rise again if we receive further rainfall across the area. Low-lying land and roads will therefore continue to be at risk of flooding. Due to the nature of groundwater behaviour, this situation could continue for several weeks or longer. We are continuing to monitor groundwater levels and will update this message next Wednesday (08/04/20), or as the situation changes.",
+        "attr": {
+            "taId": 2425,
+            "taCode": "061FAG24Crondall",
+            "taName": "Groundwater flooding in the Crondall area",
+            "taDescription": "Communities at risk of groundwater flooding in the Crondall area",
+            "quickDial": "171908",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Thames",
+            "createdDate": "2017-09-13T00:00:00.000Z",
+            "lastModifiedDate": "2017-09-13T00:00:00.000Z",
+            "situationChanged": "2020-04-01T08:45:00.000Z",
+            "severityChanged": "2020-02-19T18:12:00.000Z",
+            "timeMessageReceived": "2020-04-01T08:45:57.345Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels in East Kent have been rising throughout the winter following higher than average rainfall. Levels continued to increase throughout most of February and early March in response to heavy rainfall and storm events. Groundwater levels currently remain high but stable with the onset of drier conditions. Properties in and around the Nailbourne Valley, Alkham and Petham may experience flooding from groundwater. However, due to the nature of groundwater flooding, other properties across East Kent may also experience flooding. Further rainfall could cause groundwater levels to rise further increasing the flood risk. The Environment Agency is monitoring the situation and will update this message by Tuesday 07 April, or sooner if the situation changes.",
+        "attr": {
+            "taId": 1546,
+            "taCode": "064FAG99Eastkent",
+            "taName": "Groundwater flooding in East Kent",
+            "taDescription": "Areas at risk from Groundwater flooding including the Petham Bourne, Alkham bourne and Nailbourne including Elham, Barham, Bishopsbourne, Bridge, Patrixbourne and Bekesbourne",
+            "quickDial": "217000",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Kent, South London and East Sussex",
+            "createdDate": "2018-03-28T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-03-31T12:45:00.000Z",
+            "severityChanged": "2020-03-10T14:00:00.000Z",
+            "timeMessageReceived": "2020-03-31T12:45:33.410Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels in East Surrey and South London have been rising throughout the winter following higher than average rainfall. Levels continued to increase through most of February and early March in response to heavy rainfall and storm events. Groundwater levels currently remain high but stable with the onset of drier conditions. Properties with deep basements in and around Purley may experience flooding. However, due to the nature of groundwater flooding, other properties across East Surrey and South London may also experience flooding. The Caterham Bourne between Woldingham and Purley is now flowing, but remains in channel and is not considered a flood risk without further heavy rainfall. Flooding of gardens and low lying land may occur. The Environment Agency is monitoring the situation alongside Surrey County Council, Tandridge District Council and the London Borough of Croydon. We will update this message on Tuesday 7 April, or sooner if the situation changes.",
+        "attr": {
+            "taId": 1548,
+            "taCode": "064FAG99SElondon",
+            "taName": "Groundwater flooding in South East London",
+            "taDescription": "Areas at risk from Groundwater flooding including Caterham Bourne, Coulsdon Bourne, Beddington, Carshalton, Coulsdon, Kenley, Purley, South Croydon, Whyteleafe, Bromley, Bexley and Lewisham",
+            "quickDial": "217001",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Kent, South London and East Sussex",
+            "createdDate": "2017-11-07T00:00:00.000Z",
+            "lastModifiedDate": "2018-02-21T00:00:00.000Z",
+            "situationChanged": "2020-03-31T10:08:00.000Z",
+            "severityChanged": "2020-02-25T13:44:00.000Z",
+            "timeMessageReceived": "2020-03-31T10:08:59.182Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "At Vernham Dean and in Upton, the groundwater level continues to fall. At Vernham Dean, the current rate of fall is now 0.2 m per day. The daily rate of fall will increase this week. Over the next 5 days, the weather will remain fairly dry. Given the current rate of fall and the continued dry outlook, in 7 to 10 days, groundwater should stop affecting cellars in Upton. In St Marybourne, it will be more than another month before the sewerage network will be able to operate effectively. We continue to monitor the forecast. Please ensure that any pumps required to protect property can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2068,
+            "taCode": "065FAG002",
+            "taName": "Groundwater flooding in Vernham Dean, Upton and the Bourne Valley",
+            "taDescription": "Communities at risk of groundwater flooding in Vernham Dean, Upton and the Bourne Valley in North Hampshire including Hurstbourne Tarrant and St Mary Bourne",
+            "quickDial": "216001",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2017-05-18T00:00:00.000Z",
+            "lastModifiedDate": "2017-08-02T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:42:00.000Z",
+            "severityChanged": "2020-01-31T11:25:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:43:21.695Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels are falling in Pitton and in West Tytherley. At Lopcombe Corner and in Pitton, the current rate of fall is 0.15 m per day. Over the next 5 days, the weather will remain fairly dry. Given the current rate of fall and the continued dry outlook, it will be around 10 days before groundwater ceases to cause impacts in Pitton. It will take longer for impacts to reduce in West Tytherley. We continue to monitor the forecast. Please ensure that any pumps used to protect property can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2187,
+            "taCode": "065FAG004",
+            "taName": "Groundwater flooding in Pitton, West Tytherley, Nether Wallop and Broughton",
+            "taDescription": "Communities at risk of groundwater flooding in the West of Hampshire and East of Wiltshire, including Pitton, West Tytherley, Nether Wallop and Broughton",
+            "quickDial": "216003",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2012-12-05T00:00:00.000Z",
+            "lastModifiedDate": "2012-12-05T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:42:00.000Z",
+            "severityChanged": "2020-01-31T11:18:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:42:57.802Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The groundwater level in Hursley remains very high, but it is falling, albeit very slowly. The current rate of fall is 2 to 3 cm per day. The daily rate of fall will increase a little over the next week. Over the next 5 days, the weather will remain fairly dry. Given the current rate of fall and the continued dry outlook, it will be at least 3 weeks before groundwater ceases to cause impacts to cellars in the village. We continue to monitor the forecast. Please ensure that any pumps used to protect property can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2180,
+            "taCode": "065FAG006",
+            "taName": "Groundwater flooding in Hursley",
+            "taDescription": "Areas at risk of groundwater flooding in Hursley in Hampshire",
+            "quickDial": "216005",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2012-12-05T00:00:00.000Z",
+            "lastModifiedDate": "2012-12-05T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:42:00.000Z",
+            "severityChanged": "2020-01-31T11:18:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:42:54.147Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels are high, but they are falling slowly. At Clanville Gate and Hatherden, the rate of fall is 3 to 4 cm per day. In Kimpton and Appleshaw, the rate of fall is 1 to 2 cm per day. Over the next 5 days, the weather will remain fairly dry. Given the current rate of fall and the continued dry outlook, water levels in cellars will reduce and the situation will continue to improve. Impacts to the sewerage network will continue for at least the next 2 to 3 weeks. We continue to monitor the forecast. If you use pumps to help reduce water levels, please ensure they can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2162,
+            "taCode": "065FAG003",
+            "taName": "Groundwater flooding in villages surrounding Andover",
+            "taDescription": "Communities at risk of groundwater flooding surrounding Andover, including Appleshaw, Hatherden, Penton Mewsey, Redenham, Weyhill Bottom, Kimtpon, Amport and Monxton",
+            "quickDial": "216002",
+            "version": "7",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2013-07-04T00:00:00.000Z",
+            "lastModifiedDate": "2013-07-04T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:42:00.000Z",
+            "severityChanged": "2020-01-31T11:18:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:42:38.842Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The Groundwater level at West Meon Hut is falling, currently by 0.1m per day. In the last 7 days, the level has fallen by more than 0.5 m. At Cheriton Wood, the rate of fall is around 6 cm per day. Over the next 5 days, the weather will remain fairly dry. Levels will continue to fall and the situation will continue to improve. By early next week, if the weather outlook remains favourable, then we will remove this Flood Alert. We continue to monitor the forecast. This Flood Alert will be updated or removed by 15:00 on Monday 06/04/2020.",
+        "attr": {
+            "taId": 2184,
+            "taCode": "065FAG010",
+            "taName": "Groundwater flooding in Bramdean and Cheriton",
+            "taDescription": "Areas at risk of groundwater flooding in Bramdean and Cheriton in Hampshire",
+            "quickDial": "216009",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2018-03-22T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:42:00.000Z",
+            "severityChanged": "2020-02-17T08:31:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:42:27.071Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The Groundwater level at West Meon Hut is falling, currently by 0.1 m per day. In the last 7 days, the level has fallen by more than 0.5 m. Over the next 5 days, the weather will remain fairly dry and the situation will continue to improve. Given the current rate of fall and the continued dry outlook, it will be around 10 days before groundwater ceases to cause impacts in Twyford and at Hensting Lane. We continue to monitor the forecast. If you use pumps to help reduce water levels, please ensure they can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2195,
+            "taCode": "065FAG011",
+            "taName": "Groundwater flooding in Twyford and Hensting",
+            "taDescription": "Areas at risk of groundwater flooding in Twyford and Hensting in Hampshire",
+            "quickDial": "216010",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2012-12-05T00:00:00.000Z",
+            "lastModifiedDate": "2012-12-05T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:41:00.000Z",
+            "severityChanged": "2020-02-17T08:41:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:42:18.108Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The Groundwater level at Bishop’s Sutton remains very high, but is now falling. The current rate of fall is 1 cm every 2 days. This week, groundwater may still be causing cellar flooding in a small number of properties. It may also be preventing septic tanks from operating effectively. Over the next 5 days, the weather should remain fairly dry, and the situation will continue to improve. Given the current rate of fall, it will be at least 3 weeks before groundwater stops causing impacts in the village. We continue to monitor the forecast. If you use pumps to help reduce water levels, please ensure they can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2182,
+            "taCode": "065FAG008",
+            "taName": "Groundwater flooding in Bishops Sutton",
+            "taDescription": "Areas at risk of groundwater flooding in Bishops Sutton, near Alresford in Hampshire",
+            "quickDial": "216007",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2012-12-05T00:00:00.000Z",
+            "lastModifiedDate": "2012-12-05T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:41:00.000Z",
+            "severityChanged": "2020-02-17T09:23:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:41:58.972Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The groundwater level at Preston Candover and in Alresford is high, but it is falling in both locations. At Preston Candover, the current rate of fall is between 1 and 2 cm per day. In Alresford, the current rate of fall is 3 cm per day. Over the next few weeks, groundwater will continue to prevent septic tanks from operating effectively in Old Alresford.  In Preston Candover, groundwater will still affect a small number of cellars. Over the next 5 days, the weather should remain fairly dry, and levels will continue to fall. Given the current rate of fall, it will be at least 6 to 8 weeks before groundwater stops causing impacts in the villages. We continue to monitor the forecast. Please ensure any pumps used to protect property can operate. This Flood Alert will be updated by 15:00 on Wednesday 08/04/2020",
+        "attr": {
+            "taId": 2183,
+            "taCode": "065FAG009",
+            "taName": "Groundwater flooding in the Candovers and Old Alresford",
+            "taDescription": "Areas at risk of groundwater flooding in Preston Candover, Chilton Candover, Brown Candover and Old Alresford in Hampshire",
+            "quickDial": "216008",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2018-03-22T00:00:00.000Z",
+            "lastModifiedDate": "2018-05-23T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:41:00.000Z",
+            "severityChanged": "2020-02-17T12:43:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:41:57.231Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "In Deane and Ashe, groundwater levels are high, but they are now falling. The current rate of fall is 2 cm per day. Groundwater, will be flooding fields between Oakley and Deane. We expect cellar flooding in Deane. Septic tanks will struggle to operate properly. Over the next 5 days, the weather should remain fairly dry, and levels will continue to fall. Given the current rate of fall, it will be at least another month before groundwater ceases to cause impacts in both communities. We continue to monitor the forecast. If you have pumps to reduce water levels, please ensure they can operate. We will update this Flood Alert by 15:00 on Wednesday 08/04/2020.",
+        "attr": {
+            "taId": 2081,
+            "taCode": "065FAG001",
+            "taName": "Groundwater flooding in Deane and Ashe in North Hampshire",
+            "taDescription": "Areas at risk of groundwater flooding in Deane and Ashe in the Upper Test catchment in North Hampshire",
+            "quickDial": "216000",
+            "version": "2",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2012-12-05T00:00:00.000Z",
+            "lastModifiedDate": "2012-12-05T00:00:00.000Z",
+            "situationChanged": "2020-03-30T09:41:00.000Z",
+            "severityChanged": "2020-02-16T12:48:00.000Z",
+            "timeMessageReceived": "2020-03-30T09:41:45.232Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "Groundwater levels in the Salisbury Plain are now falling across the area. However, groundwater levels remain high and we believe there remains a possibility of flooding of fields and roads for Cholderton, Collingbourne Ducis, Hanging Langford, Hindon, Hurdcott, Idmiston, Newton Tony, Orcheston, Porton, Salisbury, Shipton Bellinger, Shrewton, Stratford Sub Castle, Tidworth, Tilshead, Tisbury, Wilton, Winterbourne Stoke and Woodford. Residents are advised to ensure property flood resilience measures are in place and that pumps are working where they have been installed. The Met Office forecasts the current spell dry and settled weather to continue. Some borehole information can be found at https://flood-warning-information.service.gov.uk/river-and-sea-levels. We continue to monitor the groundwater situation carefully and will update this message on Friday 3/04/20 or as the situation changes.",
+        "attr": {
+            "taId": 2625,
+            "taCode": "111FAGSPGW",
+            "taName": "Groundwater flooding in the Salisbury Plain area",
+            "taDescription": "Boscombe, Cholderton, Collingbourne Ducis, Hanging Langford, Hindon, Hurdcott, Idmiston, Newton Tony, Orcheston, Porton, Salisbury, Shipton Bellinger, Shrewton, Stratford Sub Castle, Tidworth, Tilshead, Tisbury, Wilton, Winterbourne Stoke and Woodford",
+            "quickDial": "210022",
+            "version": "1",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Wessex",
+            "createdDate": "2011-07-04T00:00:00.000Z",
+            "lastModifiedDate": "2011-11-03T00:00:00.000Z",
+            "situationChanged": "2020-03-28T19:20:00.000Z",
+            "severityChanged": "2020-01-29T14:53:00.000Z",
+            "timeMessageReceived": "2020-03-28T19:20:32.080Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "River levels remain high but slowly dropping at the Ringwood Old Cottage river gauge as a result of the ground being saturated. The situation is improving but we expect river levels to remain high for some time and the risk of flooding along the River Avon valley between Ringwood and Christchurch remains. We are closely monitoring the situation. Please avoid using low lying footpaths near floodwaters and plan driving routes to avoid low lying roads near rivers which may be flooded. The Met Office forecasts the dry and settled weather to continue. This message will be updated on Friday 3/04/20, or as the situation changes.",
+        "attr": {
+            "taId": 2588,
+            "taCode": "111WAFAVOL",
+            "taName": "Lower Avon and tributaries",
+            "taDescription": "Tributaries between Ringwood and Christchurch",
+            "quickDial": "210026",
+            "version": "14",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Wessex",
+            "createdDate": "2018-06-21T00:00:00.000Z",
+            "lastModifiedDate": "2018-08-22T00:00:00.000Z",
+            "situationChanged": "2020-03-28T19:16:00.000Z",
+            "severityChanged": "2020-02-03T12:30:00.000Z",
+            "timeMessageReceived": "2020-03-28T19:17:02.718Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    },
+    {
+        "situation": "The weather forecast is predicted to remain dry for the next five days. High pressure could remain into April too, but perhaps with a greater chance of light (and normal) spring showers. Groundwater levels are falling and will continue to fall with the predominantly dry weather. In the communities, groundwater is falling slowly – by about 3 centimetres a day, but levels have already fallen by 40cm from their peak this winter and are a similar distance below the surface. Higher up the valleys – at our boreholes in Chilgrove and near Cocking – groundwater is falling at a quicker rate, approximately 40cm each day. Groundwater levels are now at a level similar to Christmas. It will still take weeks until groundwater levels are more normal, but evidence of groundwater flood impacts are becoming less obvious. Sewerage infiltration will continue to reduce. We will continue to monitor the weather forecast. We will update this message by 17:00 03/04/2020.",
+        "attr": {
+            "taId": 2188,
+            "taCode": "065FAG016",
+            "taName": "Groundwater flooding in West Dean, Singleton, Charlton, East Dean and Chilgrove",
+            "taDescription": "Communities at risk of groundwater flooding to the north of Chichester, including West Dean, Singleton, Charlton, East Dean and Chilgrove",
+            "quickDial": "216015",
+            "version": "3",
+            "taCategory": "Flood Alert",
+            "ownerArea": "Solent and South Downs",
+            "createdDate": "2013-03-22T00:00:00.000Z",
+            "lastModifiedDate": "2013-06-19T00:00:00.000Z",
+            "situationChanged": "2020-03-27T12:25:00.000Z",
+            "severityChanged": "2020-02-29T09:14:00.000Z",
+            "timeMessageReceived": "2020-03-27T12:25:45.501Z",
+            "severityValue": "1",
+            "severity": "Flood alert"
+        }
+    }
+]
