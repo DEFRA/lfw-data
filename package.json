@@ -28,7 +28,9 @@
     "@hapi/code": "^8.0.1",
     "@hapi/lab": "^22.0.4",
     "codeclimate-test-reporter": "0.5.1",
+    "serverless": "1.67.0",
     "serverless-layers": "^1.5.0",
+    "sinon": "9.0.1",
     "standard": "14.3.3"
   },
   "dependencies": {
@@ -39,8 +41,6 @@
     "moment-timezone": "0.5.28",
     "pg": "8.0.0",
     "proxy-agent": "3.1.1",
-    "serverless": "1.67.0",
-    "sinon": "9.0.1",
     "sql": "0.78.0",
     "xml2js": "0.4.23"
   }
