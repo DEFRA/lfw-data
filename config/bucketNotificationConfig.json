@@ -50,23 +50,6 @@
           ]
         }
       }
-    },
-    {
-      "LambdaFunctionArn": "{{fwisProcessArn}}",
-      "Events": ["s3:ObjectCreated:*"],
-      "Filter": {
-        "Key": {
-          "FilterRules": [
-            {
-              "Name": "prefix",
-              "Value": "fwfidata/ENT_7005/fwis"
-            }, {
-              "Name": "suffix",
-              "Value": ".xml"
-            }
-          ]
-        }
-      }
     }
   ]
 }
