@@ -1,0 +1,7 @@
+{
+  "Description": "Event rule to schedule the fwisProcess lambda invocation",
+  "Name": "{{stage}}{{LFW_SERVICE_CODE}}FwisProcessRule",
+  "RoleArn": "{{lambdaRoleArn}}",
+  "ScheduleExpression": "cron(1,16,31,46 * * * ? *)",
+  "State": "ENABLED"
+}
