@@ -12,7 +12,7 @@ lab.experiment('Test Lambda functionality post deployment', () => {
     // load the test.XML file
     const params = {
       Body: xml,
-      Bucket: process.env.LFW_SLS_BUCKET,
+      Bucket: process.env.LFW_DATA_SLS_BUCKET,
       Key: 'fwfidata/ENT_7024/test.XML'
     }
     console.log('putObject: ' + params.Key)
@@ -29,10 +29,10 @@ lab.experiment('Test Lambda functionality post deployment', () => {
   lab.after(async () => {
     // delete the test files
     try {
-      await s3.deleteObject({ Bucket: process.env.LFW_SLS_BUCKET, Key: 'fwfidata/ENT_7024/test.XML' })
+      await s3.deleteObject({ Bucket: process.env.LFW_DATA_SLS_BUCKET, Key: 'fwfidata/ENT_7024/test.XML' })
       console.log('Deleted: test.XML')
       for (let i = 1; i <= 10; i++) {
-        await s3.deleteObject({ Bucket: process.env.LFW_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
+        await s3.deleteObject({ Bucket: process.env.LFW_DATA_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
         console.log('Deleted: test' + i + '.json')
       }
     } catch (err) {
@@ -48,13 +48,13 @@ lab.experiment('Test Lambda functionality post deployment', () => {
         let data
         if (i === 1) {
           try {
-            data = await s3.getObject({ Bucket: process.env.LFW_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
+            data = await s3.getObject({ Bucket: process.env.LFW_DATA_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
           } catch (err) {
             // test1.json shouldn't exist as it is non water level
             Code.expect(err).to.be.an.error()
           }
         } else {
-          data = await s3.getObject({ Bucket: process.env.LFW_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
+          data = await s3.getObject({ Bucket: process.env.LFW_DATA_SLS_BUCKET, Key: 'ffoi/test' + i + '.json' })
           Code.expect(data).to.not.be.null()
           const ffoi = JSON.parse(data.Body)
           Code.expect(ffoi.$.stationReference).to.equal('test' + i)

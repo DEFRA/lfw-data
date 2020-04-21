@@ -1,24 +1,25 @@
-service: lfw
+service: ${env:LFW_DATA_SERVICE_CODE}
 provider:
   name: aws
-  stackName: ${env:LFW_TARGET_ENV_NAME}${self:service}
+  stackName: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}
   runtime: nodejs12.x
-  role: ${env:LFW_SLS_LAMBA_ROLE}
-  stage: ${env:LFW_TARGET_ENV_NAME}
-  region: ${env:LFW_TARGET_REGION}
-  profile: ${env:LFW_AWS_PROFILE}
+  role: ${env:LFW_DATA_SLS_LAMBA_ROLE}
+  stage: ${env:LFW_DATA_TARGET_ENV_NAME}
+  region: ${env:LFW_DATA_TARGET_REGION}
+  profile: ${env:LFW_DATA_AWS_PROFILE}
   deploymentBucket:
-    name: ${env:LFW_SLS_BUCKET}
+    name: ${env:LFW_DATA_SLS_BUCKET}
   environment:
-    stage: ${env:LFW_TARGET_ENV_NAME}
-    LFW_DB_CONNECTION: ${env:LFW_DB_CONNECTION}
-    LFW_FWIS_API_KEY: ${env:LFW_FWIS_API_KEY}
+    stage: ${env:LFW_DATA_TARGET_ENV_NAME}
+    LFW_DATA_FWIS_API_URL: ${env:LFW_DATA_FWIS_API_URL}
+    LFW_DATA_DB_CONNECTION: ${env:LFW_DATA_DB_CONNECTION}
+    LFW_DATA_FWIS_API_KEY: ${env:LFW_DATA_FWIS_API_KEY}
   vpc:
     securityGroupIds:
-      - ${env:LFW_VPN_SECURITY_GROUP}
+      - ${env:LFW_DATA_VPN_SECURITY_GROUP}
     subnetIds:
-      - ${env:LFW_SUBNET_1}
-      - ${env:LFW_SUBNET_2}
+      - ${env:LFW_DATA_SUBNET_1}
+      - ${env:LFW_DATA_SUBNET_2}
 plugins:
  - serverless-layers
 package:
@@ -26,26 +27,26 @@ package:
    - test
 functions:
   ffoiProcess:
-    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-ffoiProcess
+    name: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}-ffoiProcess
     handler: lib/functions/ffoi-process.handler
     timeout: 120
     memorySize: 2048
     reservedConcurrency: 20
   rloiProcess:
-    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiProcess
+    name: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}-rloiProcess
     handler: lib/functions/rloi-process.handler
     timeout: 120
     memorySize: 2048
     reservedConcurrency: 20
   stationProcess:
-    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-stationProcess
+    name: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}-stationProcess
     handler: lib/functions/station-process.handler
     timeout: 120
   rloiRefresh:
-    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-rloiRefresh
+    name: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}-rloiRefresh
     handler: lib/functions/rloi-refresh.handler
     timeout: 60
   fwisProcess:
-    name: ${env:LFW_TARGET_ENV_NAME}${self:service}-fwisProcess
+    name: ${env:LFW_DATA_TARGET_ENV_NAME}${self:service}-fwisProcess
     handler: lib/functions/fwis-process.handler
     timeout: 120
