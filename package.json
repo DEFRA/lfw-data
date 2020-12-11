@@ -25,22 +25,23 @@
   },
   "homepage": "https://github.com/DEFRA/lfw-data#readme",
   "devDependencies": {
-    "@hapi/code": "^8.0.1",
-    "@hapi/lab": "^22.0.4",
+    "@hapi/code": "^8.0.2",
+    "@hapi/lab": "^24.1.0",
     "codeclimate-test-reporter": "0.5.1",
-    "serverless": "1.67.0",
-    "serverless-layers": "^1.5.0",
-    "sinon": "9.0.1",
-    "standard": "14.3.3"
+    "serverless": "2.15.0",
+    "serverless-layers": "^2.3.3",
+    "sinon": "9.2.2",
+    "standard": "16.0.3"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
-    "@hapi/wreck": "^17.0.0",
-    "aws-sdk": "2.649.0",
+    "@hapi/wreck": "^17.1.0",
+    "aws-sdk": "2.808.0",
     "csvtojson": "2.0.10",
-    "moment-timezone": "0.5.28",
-    "pg": "8.0.0",
-    "proxy-agent": "3.1.1",
+    "moment-timezone": "0.5.32",
+    "pg": "8.5.1",
+    "proxy-agent": "4.0.0",
+    "serverless-postgres": "^1.8.0",
     "sql": "0.78.0",
     "xml2js": "0.4.23"
   }

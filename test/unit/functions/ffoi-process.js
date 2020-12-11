@@ -16,10 +16,10 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('FFOI processing', () => {
   lab.beforeEach(async () => {
     // setup mocks
-    sinon.stub(S3.prototype, 'getObject').callsFake(() => {
+    sinon.stub(S3, 'getObject').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
+    sinon.stub(Util, 'parseXml').callsFake(() => {
       return Promise.resolve({})
     })
     sinon.stub(Ffoi.prototype, 'save').callsFake(() => {
@@ -36,7 +36,7 @@ lab.experiment('FFOI processing', () => {
   })
 
   lab.test('ffoi process S3 error', async () => {
-    S3.prototype.getObject = () => {
+    S3.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
     await Code.expect(handler(event)).to.reject()

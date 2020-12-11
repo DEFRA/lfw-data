@@ -13,14 +13,14 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('station processing', () => {
   lab.beforeEach(() => {
     // setup mocks
-    sinon.stub(S3.prototype, 'getObject').callsFake(() => {
+    sinon.stub(S3, 'getObject').callsFake(() => {
       return new Promise((resolve, reject) => {
         resolve({
           Body: 'test'
         })
       })
     })
-    sinon.stub(Util.prototype, 'parseCsv').callsFake(() => {
+    sinon.stub(Util, 'parseCsv').callsFake(() => {
       return Promise.resolve({})
     })
     sinon.stub(Station.prototype, 'saveToDb').callsFake(() => {
@@ -39,7 +39,7 @@ lab.experiment('station processing', () => {
   })
 
   lab.test('station process S3 error', async () => {
-    S3.prototype.getObject = () => {
+    S3.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
     await Code.expect(handler(event)).to.reject()
