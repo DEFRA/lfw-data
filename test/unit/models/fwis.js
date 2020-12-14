@@ -16,7 +16,7 @@ lab.experiment('fwis model', () => {
     sinon.stub(db, 'query').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'clean').callsFake(() => {
+    sinon.stub(db, 'end').callsFake(() => {
       return Promise.resolve({})
     })
   })

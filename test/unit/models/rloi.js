@@ -24,7 +24,7 @@ lab.experiment('rloi model', () => {
     sinon.stub(db, 'connect').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'clean').callsFake(() => {
+    sinon.stub(db, 'end').callsFake(() => {
       return Promise.resolve({})
     })
     sinon.stub(db, 'query').callsFake((query, vars) => {
