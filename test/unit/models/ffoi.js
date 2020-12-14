@@ -6,7 +6,7 @@ const ffoiSchema = require('../../schemas/ffoi')
 const s3PutSchema = require('../../schemas/s3-put')
 
 // mock s3 object
-const Ffoi = require('../../../lib/models/ffoi')
+const ffoi = require('../../../lib/models/ffoi')
 const s3 = require('../../../lib/helpers/s3')
 const util = require('../../../lib/helpers/util')
 
@@ -35,9 +35,8 @@ lab.experiment('ffoi model', () => {
       Code.expect(result.error).to.be.undefined()
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    const ffoi = new Ffoi(s3)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testKey')
+    await ffoi.save(file, 's3://devlfw', 'testKey', s3)
   })
 
   lab.test('FFOI old file no useful values', async () => {
@@ -50,9 +49,8 @@ lab.experiment('ffoi model', () => {
       Code.expect(result.error).to.be.null()
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    const ffoi = new Ffoi(s3)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-old.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testKey')
+    await ffoi.save(file, 's3://devlfw', 'testKey', s3)
   })
 
   lab.test('S3 put error', async () => {
@@ -60,24 +58,21 @@ lab.experiment('ffoi model', () => {
     sinon.stub(s3, 'putObject').callsFake((params) => {
       return Promise.reject(new Error('test error'))
     })
-    const ffoi = new Ffoi(s3)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
     // process continues and logs error to console
   })
 
   lab.test('File with no water level data', async () => {
-    const ffoi = new Ffoi(s3)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-no-water-level.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
   })
 
   lab.test('production console log', async () => {
     const stage = process.env.stage
-    const ffoi = new Ffoi(s3)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
     process.env.stage = 'ea'
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
     process.env.stage = stage
   })
 })

@@ -4,9 +4,9 @@ const Code = require('@hapi/code')
 const fs = require('fs')
 
 const util = require('../../../lib/helpers/util')
-const Station = require('../../../lib/models/station')
-const db = require('../../../lib/helpers/db')
+const station = require('../../../lib/models/station')
 const s3 = require('../../../lib/helpers/s3')
+const { Client } = require('pg')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -17,13 +17,13 @@ lab.experiment('station model', () => {
     sinon.stub(s3, 'putObject').callsFake(() => {
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    sinon.stub(db, 'connect').callsFake(() => {
+    sinon.stub(Client.prototype, 'connect').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'query').callsFake(() => {
+    sinon.stub(Client.prototype, 'query').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'end').callsFake(() => {
+    sinon.stub(Client.prototype, 'end').callsFake(() => {
       return Promise.resolve({})
     })
   })
@@ -32,23 +32,21 @@ lab.experiment('station model', () => {
   })
 
   lab.test('Station save to database', async () => {
-    const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    await station.saveToDb(stations)
+    const client = new Client()
+    await station.saveToDb(stations, client)
   })
 
   lab.test('Station save to object', async () => {
-    const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    await station.saveToObjects(stations)
+    await station.saveToObjects(stations, 'test', s3)
   })
 
   lab.test('production console log', async () => {
     const stage = process.env.stage
     process.env.stage = 'ea'
-    const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    await station.saveToObjects(stations)
+    await station.saveToObjects(stations, 'test', s3)
     process.env.stage = stage
   })
 
@@ -63,19 +61,18 @@ lab.experiment('station model', () => {
         }
       })
     })
-    const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
     // expect save to handle erring indivudal s3 puts
-    await station.saveToObjects(stations)
+    await station.saveToObjects(stations, 'test', s3)
   })
 
   lab.test('db error', async () => {
-    db.query.restore()
-    sinon.stub(db, 'query').callsFake((query) => {
+    Client.prototype.query.restore()
+    sinon.stub(Client.prototype, 'query').callsFake((query) => {
       return Promise.reject(new Error('test error'))
     })
-    const station = new Station(db, s3, util)
     const stations = await util.parseCsv(fs.readFileSync('./test/data/rloiStationData.csv').toString())
-    await Code.expect(station.saveToDb(stations)).to.reject()
+    const client = new Client()
+    await Code.expect(station.saveToDb(stations, client)).to.reject()
   })
 })

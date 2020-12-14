@@ -6,9 +6,9 @@ const rloiValueParentSchema = require('../../schemas/rloi-value-parent')
 const rloiValuesSchema = require('../../schemas/rloi-values')
 
 const util = require('../../../lib/helpers/util')
-const Rloi = require('../../../lib/models/rloi')
-const db = require('../../../lib/helpers/db')
+const rloi = require('../../../lib/models/rloi')
 const s3 = require('../../../lib/helpers/s3')
+const { Client } = require('pg')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -21,13 +21,13 @@ lab.experiment('rloi model', () => {
         Body: JSON.stringify(require('../../data/station.json'))
       })
     })
-    sinon.stub(db, 'connect').callsFake(() => {
+    sinon.stub(Client.prototype, 'connect').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'end').callsFake(() => {
+    sinon.stub(Client.prototype, 'end').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(db, 'query').callsFake((query, vars) => {
+    sinon.stub(Client.prototype, 'query').callsFake((query, vars) => {
       let resultQuery, resultVars
       if (typeof query === 'object') {
         // test values insert
@@ -60,14 +60,13 @@ lab.experiment('rloi model', () => {
     // sinon.restore()
     // const db = sinon.createStubInstance(Db)
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi-test.xml'))
-    const rloi = new Rloi(db, s3, util)
     rloi.save(file, 's3://devlfw', 'testkey')
   })
 
   lab.test('RLOI process empty values', async () => {
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi-empty.xml'))
-    const rloi = new Rloi(db, s3, util)
-    rloi.save(file, 's3://devlfw', 'testkey')
+    const client = new Client()
+    rloi.save(file, 's3://devlfw', 'testkey', client, s3)
   })
 
   lab.test('RLOI process no station', async () => {
@@ -76,8 +75,8 @@ lab.experiment('rloi model', () => {
       return Promise.resolve()
     })
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi-test.xml'))
-    const rloi = new Rloi(db, s3, util)
-    rloi.save(file, 's3://devlfw', 'testkey')
+    const client = new Client()
+    rloi.save(file, 's3://devlfw', 'testkey', client, s3)
   })
 
   lab.test('RLOI process no station', async () => {
@@ -89,8 +88,8 @@ lab.experiment('rloi model', () => {
     })
 
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi-test.xml'))
-    const rloi = new Rloi(db, s3, util)
-    rloi.save(file, 's3://devlfw', 'testkey')
+    const client = new Client()
+    rloi.save(file, 's3://devlfw', 'testkey', client, s3)
   })
 
   lab.test('RLOI process no station', async () => {
@@ -101,13 +100,13 @@ lab.experiment('rloi model', () => {
       })
     })
     const file = await util.parseXml(fs.readFileSync('./test/data/rloi-test.xml'))
-    const rloi = new Rloi(db, s3, util)
-    rloi.save(file, 's3://devlfw', 'testkey')
+    const client = new Client()
+    rloi.save(file, 's3://devlfw', 'testkey', client, s3)
   })
 
   lab.test('RLOI delete Old', async () => {
-    const rloi = new Rloi(db)
-    rloi.deleteOld()
+    const client = new Client()
+    rloi.deleteOld(client)
   })
 
   lab.test('RLOI process with non numeric return', async () => {
@@ -118,7 +117,7 @@ lab.experiment('rloi model', () => {
       return false
     })
     util2.isNumeric()
-    const rloi = new Rloi(db, s3, util2)
-    rloi.save(file, 's3://devlfw', 'testkey')
+    const client = new Client()
+    rloi.save(file, 's3://devlfw', 'testkey', client, s3)
   })
 })
