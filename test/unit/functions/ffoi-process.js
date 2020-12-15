@@ -6,9 +6,9 @@ const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/ffoi-process').handler
 const event = require('../../events/ffoi-event.json')
 
-const S3 = require('../../../lib/helpers/s3')
-const Util = require('../../../lib/helpers/util')
-const Ffoi = require('../../../lib/models/ffoi')
+const s3 = require('../../../lib/helpers/s3')
+const util = require('../../../lib/helpers/util')
+const ffoi = require('../../../lib/models/ffoi')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -16,13 +16,13 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('FFOI processing', () => {
   lab.beforeEach(async () => {
     // setup mocks
-    sinon.stub(S3.prototype, 'getObject').callsFake(() => {
+    sinon.stub(s3, 'getObject').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
+    sinon.stub(util, 'parseXml').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Ffoi.prototype, 'save').callsFake(() => {
+    sinon.stub(ffoi, 'save').callsFake(() => {
       return Promise.resolve({})
     })
   })
@@ -36,7 +36,7 @@ lab.experiment('FFOI processing', () => {
   })
 
   lab.test('ffoi process S3 error', async () => {
-    S3.prototype.getObject = () => {
+    s3.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
     await Code.expect(handler(event)).to.reject()

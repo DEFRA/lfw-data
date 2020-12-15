@@ -6,21 +6,16 @@ const ffoiSchema = require('../../schemas/ffoi')
 const s3PutSchema = require('../../schemas/s3-put')
 
 // mock s3 object
-const Ffoi = require('../../../lib/models/ffoi')
-const S3 = require('../../../lib/helpers/s3')
-const util = new (require('../../../lib/helpers/util'))()
-const Db = require('../../../lib/helpers/db')
+const ffoi = require('../../../lib/models/ffoi')
+const s3 = require('../../../lib/helpers/s3')
+const util = require('../../../lib/helpers/util')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
 
 lab.experiment('ffoi model', () => {
   lab.beforeEach(() => {
-    sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
-      return Promise.resolve({})
-    })
-    // set the db mock
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+    sinon.stub(s3, 'putObject').callsFake((params) => {
       return Promise.resolve({})
     })
   })
@@ -32,10 +27,7 @@ lab.experiment('ffoi model', () => {
 
   lab.test('FFOI happy process', async () => {
     sinon.restore()
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return Promise.resolve({})
-    })
-    sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
+    sinon.stub(s3, 'putObject').callsFake((params) => {
       let result = s3PutSchema.validate(params)
       Code.expect(result.error).to.be.undefined()
       const file = JSON.parse(params.Body)
@@ -43,19 +35,13 @@ lab.experiment('ffoi model', () => {
       Code.expect(result.error).to.be.undefined()
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    const s3 = new S3()
-    const db = new Db()
-    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testKey')
+    await ffoi.save(file, 's3://devlfw', 'testKey', s3)
   })
 
   lab.test('FFOI old file no useful values', async () => {
     sinon.restore()
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return Promise.resolve({})
-    })
-    sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
+    sinon.stub(s3, 'putObject').callsFake((params) => {
       let result = s3PutSchema.validate(params)
       Code.expect(result.error).to.be.null()
       const file = JSON.parse(params.Body)
@@ -63,45 +49,30 @@ lab.experiment('ffoi model', () => {
       Code.expect(result.error).to.be.null()
       return Promise.resolve({ ETag: '"47f693afd590c0b546bc052f6cfb4b71"' })
     })
-    const s3 = new S3()
-    const db = new Db()
-    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-old.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testKey')
+    await ffoi.save(file, 's3://devlfw', 'testKey', s3)
   })
 
   lab.test('S3 put error', async () => {
     sinon.restore()
-    sinon.stub(S3.prototype, 'putObject').callsFake((params) => {
+    sinon.stub(s3, 'putObject').callsFake((params) => {
       return Promise.reject(new Error('test error'))
     })
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
-      return Promise.resolve({})
-    })
-    const s3 = new S3()
-    const db = new Db()
-    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
     // process continues and logs error to console
   })
 
   lab.test('File with no water level data', async () => {
-    const s3 = new S3()
-    const db = new Db()
-    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test-no-water-level.xml'))
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
   })
 
   lab.test('production console log', async () => {
     const stage = process.env.stage
-    const s3 = new S3()
-    const db = new Db()
-    const ffoi = new Ffoi(s3, db)
     const file = await util.parseXml(fs.readFileSync('./test/data/ffoi-test.xml'))
     process.env.stage = 'ea'
-    await ffoi.save(file, 's3://devlfw', 'testkey')
+    await ffoi.save(file, 's3://devlfw', 'testkey', s3)
     process.env.stage = stage
   })
 })

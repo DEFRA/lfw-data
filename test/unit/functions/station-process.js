@@ -3,9 +3,10 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/station-process').handler
 const event = require('../../events/station-event.json')
-const S3 = require('../../../lib/helpers/s3')
-const Util = require('../../../lib/helpers/util')
-const Station = require('../../../lib/models/station')
+const s3 = require('../../../lib/helpers/s3')
+const util = require('../../../lib/helpers/util')
+const station = require('../../../lib/models/station')
+const { Client } = require('pg')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -13,20 +14,29 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('station processing', () => {
   lab.beforeEach(() => {
     // setup mocks
-    sinon.stub(S3.prototype, 'getObject').callsFake(() => {
+    sinon.stub(s3, 'getObject').callsFake(() => {
       return new Promise((resolve, reject) => {
         resolve({
           Body: 'test'
         })
       })
     })
-    sinon.stub(Util.prototype, 'parseCsv').callsFake(() => {
+    sinon.stub(util, 'parseCsv').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Station.prototype, 'saveToDb').callsFake(() => {
+    sinon.stub(station, 'saveToDb').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Station.prototype, 'saveToObjects').callsFake(() => {
+    sinon.stub(station, 'saveToObjects').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'connect').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'query').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'end').callsFake(() => {
       return Promise.resolve({})
     })
   })
@@ -39,7 +49,7 @@ lab.experiment('station processing', () => {
   })
 
   lab.test('station process S3 error', async () => {
-    S3.prototype.getObject = () => {
+    s3.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
     await Code.expect(handler(event)).to.reject()

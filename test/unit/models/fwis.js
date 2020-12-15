@@ -1,8 +1,8 @@
 const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const fs = require('fs')
-const Fwis = require('../../../lib/models/fwis')
-const Db = require('../../../lib/helpers/db')
+const fwis = require('../../../lib/models/fwis')
+const { Client } = require('pg')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -10,7 +10,13 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('fwis model', () => {
   lab.beforeEach(() => {
     // set the db mock
-    sinon.stub(Db.prototype, 'query').callsFake((query) => {
+    sinon.stub(Client.prototype, 'connect').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'query').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'end').callsFake(() => {
       return Promise.resolve({})
     })
   })
@@ -20,9 +26,8 @@ lab.experiment('fwis model', () => {
   })
 
   lab.test('fwis save', async () => {
-    const db = new Db(true)
-    const fwis = new Fwis(db)
     const file = JSON.parse(fs.readFileSync('./test/data/fwis.json').toString())
-    await fwis.save(file, 10000)
+    const client = new Client()
+    await fwis.save(file, 10000, client)
   })
 })

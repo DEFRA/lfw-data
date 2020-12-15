@@ -3,9 +3,10 @@ const lab = exports.lab = Lab.script()
 const Code = require('@hapi/code')
 const handler = require('../../../lib/functions/rloi-process').handler
 const event = require('../../events/fwis-event.json')
-const S3 = require('../../../lib/helpers/s3')
-const Util = require('../../../lib/helpers/util')
-const Rloi = require('../../../lib/models/rloi')
+const s3 = require('../../../lib/helpers/s3')
+const util = require('../../../lib/helpers/util')
+const rloi = require('../../../lib/models/rloi')
+const { Client } = require('pg')
 
 // start up Sinon sandbox
 const sinon = require('sinon').createSandbox()
@@ -13,13 +14,22 @@ const sinon = require('sinon').createSandbox()
 lab.experiment('rloi processing', () => {
   lab.beforeEach(() => {
     // setup mocks
-    sinon.stub(S3.prototype, 'getObject').callsFake(() => {
+    sinon.stub(s3, 'getObject').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Util.prototype, 'parseXml').callsFake(() => {
+    sinon.stub(util, 'parseXml').callsFake(() => {
       return Promise.resolve({})
     })
-    sinon.stub(Rloi.prototype, 'save').callsFake(() => {
+    sinon.stub(rloi, 'save').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'connect').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'query').callsFake(() => {
+      return Promise.resolve({})
+    })
+    sinon.stub(Client.prototype, 'end').callsFake(() => {
       return Promise.resolve({})
     })
   })
@@ -32,7 +42,7 @@ lab.experiment('rloi processing', () => {
   })
 
   lab.test('rloi process S3 error', async () => {
-    S3.prototype.getObject = () => {
+    s3.getObject = () => {
       return Promise.reject(new Error('test error'))
     }
     await Code.expect(handler(event)).to.reject()
