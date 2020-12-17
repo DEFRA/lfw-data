@@ -4,7 +4,7 @@ const Lab = require('@hapi/lab')
 const lab = exports.lab = Lab.script()
 const fs = require('fs')
 const Code = require('@hapi/code')
-const s3 = new (require('../../lib/helpers/s3'))()
+const s3 = require('../../lib/helpers/s3')
 const xml = fs.readFileSync('./test/data/ffoi-test.xml')
 
 lab.experiment('Test Lambda functionality post deployment', () => {
