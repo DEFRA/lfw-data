@@ -1,6 +1,6 @@
 {
   "name": "lfw-data",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Serverless (AWS Lambda) project for LFW data processing",
   "engines": {
     "node": "12.x"
