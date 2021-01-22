@@ -1,0 +1,32 @@
+# LFW legacy release 4.7.0 27th January 2021 - TBC depending on business decision
+
+# Release in Jira (Release 2):
+https://eaflood.atlassian.net/projects/FS/versions/15130/tab/release-report-all-issues
+
+# Tickets:
+FS-5 - (epic) beta service links
+FS-35 - lfw-data DNS retry fix
+
+Other tickets on release are tasks related to FS-5 epic.
+
+# Instructions for webops
+
+Note: This release involves a deployment of the LFW node applications, and also a deployment of the lfw-data serverless application.
+It also involves the addition of the service refresh environment link https://check-for-flooding.prd.defra.cloud/ therefore the presence of this environment is a prerequisite. At the time of writing (22.1.21) it is avaiable with correct ssl certification.
+
+## LFW-DATA (v2.1.0) - https://github.com/DEFRA/lfw-data/releases/tag/2.1.0
+
+Execute job: LFW_{stage}_99_DEPLOY_LFW_DATA (in misc dir)
+
+-- please ensure successful deployment before moving on
+
+
+## LFW (v4.7.0) - https://gitlab-dev.aws-int.defra.cloud/flood/lfw/-/tree/production
+
+Execute job: LFW_{stage}_03_UPDATE_FLOOD_APP_SERVICE
+
+Please beware there is a new config value for the application `betaUrl`, there is risk the build will fail if the value is not in the config file, but I have checked master branch for presence.
+
+-- On completion inform flood dev and test to perform checks
+
+Thanks.
