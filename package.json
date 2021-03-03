@@ -9,7 +9,7 @@
     "deploy": "sls deploy -v --force",
     "integration-test": "lab test/integration -v -r console -o stdout -r junit -o test/output-integration.xml -m 30000",
     "lint": "standard",
-    "unit-test": "lab test/unit -c -r console -o stdout -r lcov -o lcov.info -r junit -o test/output-unit.xml",
+    "unit-test": "lab test/unit -c -r console -o stdout -r lcov -o coverage/lcov.info -r junit -o test/output-unit.xml",
     "post-deployment-test": "npm run integration-test",
     "pre-deployment-test": "npm run lint && npm run unit-test",
     "test": "npm run lint && npm run unit-test"
@@ -27,7 +27,6 @@
   "devDependencies": {
     "@hapi/code": "^8.0.2",
     "@hapi/lab": "^24.1.0",
-    "codeclimate-test-reporter": "0.5.1",
     "serverless": "2.15.0",
     "serverless-layers": "^2.3.3",
     "sinon": "9.2.2",
