@@ -27,7 +27,7 @@
   "devDependencies": {
     "@hapi/code": "^8.0.2",
     "@hapi/lab": "^24.1.0",
-    "serverless": "2.15.0",
+    "serverless": "2.72.3",
     "serverless-layers": "^2.3.3",
     "sinon": "9.2.2",
     "standard": "16.0.3"
